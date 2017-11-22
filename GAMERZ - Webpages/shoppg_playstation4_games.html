@@ -1,0 +1,512 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel = "icon" href = "Images/title_logo.png">
+<link rel = "stylesheet" href = "CSS/css_shoppg.css">
+<link rel = "stylesheet" href = "CSS/css_shoppg_dropdown.css">
+<link rel = "stylesheet" href = "CSS/css_shoppg_form.css">
+<script type = "text/javascript" src = "Javascript/javascript_buying_form.js"></script>
+<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#Categories_show").click(function(){
+        $("#cat").toggleClass("fa-chevron-circle-down");
+        $("#cat").toggleClass("fa-chevron-circle-right");
+        $(".cons_categories").slideToggle("fast");
+        $("i#ps4").toggleClass("fa-chevron-right", false);
+        $("i#ps4").toggleClass("fa-chevron-down", true);
+        $("#ps4_sub").slideUp("fast");
+        $("i#psvr").toggleClass("fa-chevron-right", false);
+        $("i#psvr").toggleClass("fa-chevron-down", true);
+        $("#psvr_sub").slideUp("fast");
+        $("i#psvita").toggleClass("fa-chevron-right", false);
+        $("i#psvita").toggleClass("fa-chevron-down", true);
+        $("#psvita_sub").slideUp("fast");
+    });
+    $("#ps4_cat").click(function(){
+        $("i#ps4").toggleClass("fa-chevron-down");
+        $("i#ps4").toggleClass("fa-chevron-right");
+        $("#ps4_sub").slideToggle("fast");
+        $("i#psvr").toggleClass("fa-chevron-right", false);
+        $("i#psvr").toggleClass("fa-chevron-down", true);
+        $("#psvr_sub").slideUp("fast");
+        $("i#psvita").toggleClass("fa-chevron-right", false);
+        $("i#psvita").toggleClass("fa-chevron-down", true);
+        $("#psvita_sub").slideUp("fast");
+    });
+    $("#psvr_cat").click(function(){
+        $("i#psvr").toggleClass("fa-chevron-down");
+        $("i#psvr").toggleClass("fa-chevron-right");
+        $("#psvr_sub").slideToggle("fast");
+        $("i#ps4").toggleClass("fa-chevron-right", false);
+        $("i#ps4").toggleClass("fa-chevron-down", true);
+        $("#ps4_sub").slideUp("fast");
+        $("i#psvita").toggleClass("fa-chevron-right", false);
+        $("i#psvita").toggleClass("fa-chevron-down", true);
+        $("#psvita_sub").slideUp("fast");
+    });
+    $("#psvita_cat").click(function(){
+        $("i#psvita").toggleClass("fa-chevron-down");
+        $("i#psvita").toggleClass("fa-chevron-right");
+        $("#psvita_sub").slideToggle("fast");
+        $("i#ps4").toggleClass("fa-chevron-right", false);
+        $("i#ps4").toggleClass("fa-chevron-down", true);
+        $("#ps4_sub").slideUp("fast");
+        $("i#psvr").toggleClass("fa-chevron-right", false);
+        $("i#psvr").toggleClass("fa-chevron-down", true);
+        $("#psvr_sub").slideUp("fast");
+    });
+    $(".buy_button").click(function(){
+        $("#buyForm_cover").css("display", "block");
+    });
+    $(".cancel_button").click(function(){
+        $("#buyForm_cover").css("display", "none");
+        $("#reset").click();
+    });
+    $("#click").click(function(){
+        $("#acceptTC").click();
+    });
+});
+</script>
+<script>
+var iPicture = new Array(6);
+iPicture["ForHonor"] = "Images/PS4_Items_Pictures/For_Honor.jpg";
+iPicture["Nioh"] = "Images/PS4_Items_Pictures/Nioh.jpg";
+iPicture["ResidentEvil7"] = "Images/PS4_Items_Pictures/Resident_Evil_7_Biohazard_7.jpg";
+iPicture["WatchDogs2"] = "Images/PS4_Items_Pictures/Watch_Dogs_2.jpg";
+iPicture["Battlefield1"] = "Images/PS4_Items_Pictures/Battlefield_1.jpg";
+iPicture["Overwatch"] = "Images/PS4_Items_Pictures/Overwatch_Origins_Edition.jpg";
+
+var iName = new Array(6);
+iName["ForHonor"] = "For Honor";
+iName["Nioh"] = "Nioh";
+iName["ResidentEvil7"] = "Resident Evil 7: Biohazard 7";
+iName["WatchDogs2"] = "Watch Dogs 2";
+iName["Battlefield1"] = "Battlefield 1";
+iName["Overwatch"] = "Overwatch Origins Edition";
+
+var iNumber = new Array(6);
+iNumber["ForHonor"] = "335674";
+iNumber["Nioh"] = "199028";
+iNumber["ResidentEvil7"] = "780090";
+iNumber["WatchDogs2"] = "228973";
+iNumber["Battlefield1"] = "656790";
+iNumber["Overwatch"] = "120906";
+
+var iPrice = new Array(6);
+iPrice["ForHonor"] = "269.99";
+iPrice["Nioh"] = "269.99";
+iPrice["ResidentEvil7"] = "269.99";
+iPrice["WatchDogs2"] = "269.99";
+iPrice["Battlefield1"] = "179.99";
+iPrice["Overwatch"] = "269.99";
+
+function ShowThis(item)
+{
+    document.getElementById("itemPicture").src = iPicture[item.name];
+    document.getElementById("itemName").innerHTML = iName[item.name];
+    document.getElementById("itemNo").innerHTML = iNumber[item.name];
+    document.getElementById("itemPrice").innerHTML = iPrice[item.name];
+}
+
+function confirmed()
+{
+    var isConfirm = confirm("Are you sure that you want to buy this item?\n" + document.getElementById('itemName').innerHTML + " - " + itemprice + "\nPress OK to confirm purchasing");
+    
+    if(isConfirm)
+    {
+        document.buying_form.action = "comp_buying_form_ps4games.html";
+        return true;
+    }
+    $("#buyForm_cover").css("display", "none");
+    $("#reset").click();
+    return false;
+}
+</script>
+<title>
+GAMERZ - Shop
+</title>
+</head>
+<body class = "back_colour">
+    <div id = "buyForm_cover">
+        <div class = "form_wrapper">
+            <button type = "button" class = "cancel_button" title = "Cancel">X</button>
+            <form id = "buying_form" name = "buying_form" onsubmit = "return CheckBuyingForm()" action = "">
+                <h3 class = "formtop">Item to buy : </h3>
+                <img src = "" id = "itemPicture" alt = "Item Picture" height = "130"/>
+                <div id = "buyItem">
+                    <div class = "ItemName">
+                        <h3 id = "itemName" class = "itemName"><label></label></h3>
+                    </div>
+                    <br/>
+                    <div class = "ItemNo">
+                        <h3><label>Model No : <span id = "itemNo" class = "itemNo"></span></label></h3>
+                    </div>
+                    <div class = "ItemPrice">
+                        <h3><label>RM <span id = "itemPrice" class = "itemPrice"></span></label></h3>
+                    </div>
+                </div>
+                <div id = "clearing"></div>
+                <div class = "sep_item">
+                    <hr/>
+                </div>
+                <h3 style = "margin-bottom : 3px;">&nbsp;&nbsp;&nbsp;Enter the following : </h3>
+                <div class = "uInput">
+                    <div class = "firstName_cover">
+                        <p class = "inputName">First Name</p>
+                        <p class = "pSize"><input type = "text" id = "firstName" name = "firstName" class = "inputtxt" placeholder = "Your First Name"/></p>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class = "lastName_cover">
+                        <p class = "inputName">Last Name</p>
+                        <p class = "pSize"><input type = "text" id = "lastName" name = "lastName" class = "inputtxt" placeholder = "Your Last Name"/></p>
+                    </div>
+                </div>
+                <div class = "uInput">
+                    <p class = "inputName">Country</p>
+                    <select id = "country" name = "country">
+                        <option value = "">- Select your Country -</option>
+                        <option value="MY">Malaysia</option>
+	        	<option value="AF">Afghanistan</option>
+	        	<option value="AU">Australia</option>
+	        	<option value="BR">Brazil</option>
+	        	<option value="CN">China</option>
+	        	<option value="DK">Denmark</option>
+	        	<option value="FR">France</option>
+	        	<option value="DE">Germany</option>
+	        	<option value="HK">Hong Kong</option>
+	        	<option value="IN">India</option>
+	        	<option value="ID">Indonesia</option>
+	        	<option value="IT">Italy</option>
+	        	<option value="JP">Japan</option>
+	        	<option value="KR">Korea</option>
+	        	<option value="LA">Laos</option>
+	        	<option value="MX">Mexico</option>
+	        	<option value="PK">Pakistan</option>
+	        	<option value="PH">Philippines</option>
+	        	<option value="RU">Russia</option>
+	        	<option value="SG">Singapore</option>
+	        	<option value="TW">Taiwan</option>
+	        	<option value="TH">Thailand</option>
+	        	<option value="GB">United Kingdom</option>
+	        	<option value="US">United States</option>
+                    </select>
+                </div>
+                <div class = "uInput">
+                    <div class = "address_cover">
+                        <p class = "inputName">Address</p>
+                        <p class = "pSize"><input type = "text" id = "address" name = "address" class = "inputtxt" placeholder = "Address"/></p>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class = "address_cover2">
+                        <p class = "inputName">Address 2</p>
+                        <p class = "pSize"><input type = "text" id = "address2" name = "address2" class = "inputtxt" placeholder = "Address 2"/></p>
+                    </div>
+                </div>
+                <div class = "uInput">
+                    <p class = "inputName">Postcode</p>
+                    <p class = "pSize"><input type = "text" id = "postCode" name = "postCode" class = "inputtxt" placeholder = "Postcode"/></p>
+                </div>
+                <div class = "uInput">
+                    <p class = "inputName">Contact No.</p>
+                    <p class = "pSize"><input type = "text" id = "contactNo" name = "contactNo" class = "inputtxt" placeholder = "Your Contact No"/></p>
+                </div>
+                <div class = "uInput">
+                    <p class = "inputName">Card Number</p>
+                    <div class = "card_cover">
+                        <select id = "cardType" name = "cardType">
+                            <option value = "">- Select your card type -</option>
+                            <option value="AE">American Express</option>
+	                    <option value="DS">Discover</option>
+	                    <option value="MC">Mastercard</option>
+	                    <option value="VS">Visa</option>
+                        </select>
+                        <p class = "pSize"><input type = "text" id = "cardNo" name = "cardNo" class = "inputtxt" placeholder = "Card Number"/></p>
+                    </div>
+                </div>
+                <div class = "uInput" style = "margin-top : 5px;">
+                    <input type = "checkbox" id = "acceptTC" name = "acceptTC"/><label id = "click"> Accept Terms and Conditions</label>
+                </div>
+                <div class = "uInput">
+                    <input type = "submit" name = "submit" id = "submit" value = "Submit" title = "Buy"/>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "reset" name = "reset" id = "reset" value = "Clear" title = "Clear All"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <header id = "header">
+        <div class = "menu_cover">
+            <div class = "menu_logo">
+                <div class = "logo">
+	            <a target = "_self" href = "homepg.html">
+	                <img src = "Images/menu_logo.png" title = "GAMERZ" alt = "Homepage">
+                    </a>
+                </div>
+            </div>
+            <div class = "site_words"><label>Order With Us<br/>Play With Us</label></div>
+            <div id = "space"></div>
+            <div class = "acc_cover">
+                <div class = "acc_dropdown">
+	            <button class = "acc_dropbutton">Member</button>
+                        <div class = "acc_dropdown-content">
+                            <a target = "_self" href = "loginpg.html">Login</a>
+                            <a target = "_self" href = "registerpg.html">Register for an account</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id = "clearing"></div>
+    <div id = "categories">
+        <div id = "categories_cover">
+            <ul class = "categories_list">
+                <li id = "Categories_show"><label><i id = "cat" class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;CATEGORIES</label></li>
+                <li class = "cons_categories">
+                    <div id = "ps4_cat" class = "cons_cat">
+                        <label>&nbsp;<i id = "ps4" class = "fa fa-chevron-down"></i>&nbsp;PS4</label>
+                    </div>
+                    <div>
+                        <ul id = "ps4_sub" class = "sub-list">
+                            <a href = "shoppg_playstation4_consoles_accs.html"><li id = "ps4_accs">Consoles & Accessories</li></a>
+                            <a href = "shoppg_playstation4_games.html"><li id = "ps4_games">Games</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li class = "cons_categories">
+                    <div id = "psvr_cat" class = "cons_cat">
+                        <label>&nbsp;<i id = "psvr" class = "fa fa-chevron-down"></i>&nbsp;PSVR</label>
+                    </div>
+                    <div>
+                        <ul id = "psvr_sub" class = "sub-list">
+                            <a href = "shoppg_playstationvr_consoles_accs.html"><li id = "psvr_accs">Consoles & Accessories</li></a>
+                            <a href = "shoppg_playstationvr_games.html"><li id = "psvr_games">Games</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li class = "cons_categories">
+                    <div id = "psvita_cat" class = "cons_cat">
+                        <label>&nbsp;<i id = "psvita" class = "fa fa-chevron-down"></i>&nbsp;PSVita</label></span>
+                    </div>
+                    <div>
+                        <ul id = "psvita_sub" class = "sub-list">
+                            <a href = "shoppg_playstationvita_consoles_accs.html"><li id = "psvita_accs">Consoles & Accessories</li></a>
+                            <a href = "shoppg_playstationvita_games.html"><li id = "psvita_games">Games</li></a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id = "purchase">
+        <div id = "purchase_cover">
+            <div id = "PS4_ac">
+                <div class = "consoles_name">
+                    <div id = "cname">
+                        <label>Playstation 4</label>
+                    </div>
+                </div>
+                <div class = "consoles_categories">
+                    <div id = "ccategories">
+                        <label>Games</label>
+                    </div>
+                </div>
+                <div class = "items_list">
+                    <div class = "item" id = "for_honor">
+                        <img src = "Images/PS4_Items_Pictures/For_Honor.jpg"/>
+                        <div class = "item_details">
+                            <div class = "item_name">
+                                <h3 class = "iName"><label>For Honor</label></h3>
+                            </div>
+                            <div class = "item_model">
+                                <p><span class = "bold_letter">Model No : </span>335674 &nbsp;|&nbsp; <span class = "bold_letter">Release Date : </span>14 / 02 / 2017</p>
+                            </div>
+                            <div class = "item_description">
+                                <p>Enter the chaos of a raging war</p>
+                            </div>
+                        </div>
+                        <div class = "item_buy">
+                            <div class = "item_price">
+                                <h2><label>RM 269.99</label></h2>
+                            </div>
+                            <div class = "to_buy">
+                                <a href = "#buying_form"><input type = "button" onclick = "ShowThis(this)" class = "buy_button" name = "ForHonor" id = "ForHonor" value = "Buy"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "clearing"></div>
+                    <div class = "sep_item">
+                        <hr/>
+                    </div>
+                    <div class = "item" id = "nioh">
+                        <img src = "Images/PS4_Items_Pictures/Nioh.jpg"/>
+                        <div class = "item_details">
+                            <div class = "item_name">
+                                <h3 class = "iName"><label>Nioh</label></h3>
+                            </div>
+                            <div class = "item_model">
+                                <p><span class = "bold_letter">Model No : </span>199028 &nbsp;|&nbsp; <span class = "bold_letter">Release Date : </span>07 / 02 / 2017</p>
+                            </div>
+                            <div class = "item_description">
+                                <p>Immerse yourself in the amazing historical fantasy<br/>world as a brave samurai</p>
+                            </div>
+                        </div>
+                        <div class = "item_buy">
+                            <div class = "item_price">
+                                <h2><label>RM 269.99</label></h2>
+                            </div>
+                            <div class = "to_buy">
+                                <a href = "#buying_form"><input type = "button" onclick = "ShowThis(this)" class = "buy_button" name = "Nioh" id = "Nioh" value = "Buy"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "clearing"></div>
+                    <div class = "sep_item">
+                        <hr/>
+                    </div>
+                    <div class = "item" id = "residentEvil7">
+                        <img src = "Images/PS4_Items_Pictures/Resident_Evil_7_Biohazard_7.jpg"/>
+                        <div class = "item_details">
+                            <div class = "item_name">
+                                <h3 class = "iName"><label>Resident Evil 7: Biohazard 7</label></h3>
+                            </div>
+                            <div class = "item_model">
+                                <p><span class = "bold_letter">Model No : </span>780090 &nbsp;|&nbsp; <span class = "bold_letter">Release Date : </span>01 / 24 / 2017</p>
+                            </div>
+                            <div class = "item_description">
+                                <p>Make every effort to get out alive</p>
+                            </div>
+                        </div>
+                        <div class = "item_buy">
+                            <div class = "item_price">
+                                <h2><label>RM 269.99</label></h2>
+                            </div>
+                            <div class = "to_buy">
+                                <a href = "#buying_form"><input type = "button" onclick = "ShowThis(this)" class = "buy_button" name = "ResidentEvil7" id = "ResidentEvil7" value = "Buy"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "clearing"></div>
+                    <div class = "sep_item">
+                        <hr/>
+                    </div>
+                    <div class = "item" id = "watchdogs2">
+                        <img src = "Images/PS4_Items_Pictures/Watch_Dogs_2.jpg"/>
+                        <div class = "item_details">
+                            <div class = "item_name">
+                                <h3 class = "iName"><label>Watch Dogs 2</label></h3>
+                            </div>
+                            <div class = "item_model">
+                                <p><span class = "bold_letter">Model No : </span>228973 &nbsp;|&nbsp; <span class = "bold_letter">Release Date : </span>15 / 11 / 2016</p>
+                            </div>
+                            <div class = "item_description">
+                                <p>You will be able to hack and control all around you</p>
+                            </div>
+                        </div>
+                        <div class = "item_buy">
+                            <div class = "item_price">
+                                <h2><label>RM 269.99</label></h2>
+                            </div>
+                            <div class = "to_buy">
+                                <a href = "#buying_form"><input type = "button" onclick = "ShowThis(this)" class = "buy_button" name = "WatchDogs2" id = "WatchDogs2" value = "Buy"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "clearing"></div>
+                    <div class = "sep_item">
+                        <hr/>
+                    </div>
+                    <div class = "item" id = "battlefield1">
+                        <img src = "Images/PS4_Items_Pictures/Battlefield_1.jpg"/>
+                        <div class = "item_details">
+                            <div class = "item_name">
+                                <h3 class = "iName"><label>Battlefield 1</label></h3>
+                            </div>
+                            <div class = "item_model">
+                                <p><span class = "bold_letter">Model No : </span>656790 &nbsp;|&nbsp; <span class = "bold_letter">Release Date : </span>21 / 10 / 2016</p>
+                            </div>
+                            <div class = "item_description">
+                                <p>Be part of the biggest multiplayer battles ever known<br/>to man with the possibility of the complete<br/>destruction of vehicles and buildings</p>
+                            </div>
+                        </div>
+                        <div class = "item_buy">
+                            <div class = "item_price">
+                                <h2><label>RM 179.99</label></h2>
+                            </div>
+                            <div class = "to_buy">
+                                <a href = "#buying_form"><input type = "button" onclick = "ShowThis(this)" class = "buy_button" name = "Battlefield1" id = "Battlefield1" value = "Buy"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "clearing"></div>
+                    <div class = "sep_item">
+                        <hr/>
+                    </div>
+                    <div class = "item" id = "overwatch">
+                        <img src = "Images/PS4_Items_Pictures/Overwatch_Origins_Edition.jpg"/>
+                        <div class = "item_details">
+                            <div class = "item_name">
+                                <h3 class = "iName"><label>Overwatch Origins Edition</label></h3>
+                            </div>
+                            <div class = "item_model">
+                                <p><span class = "bold_letter">Model No : </span>120906 &nbsp;|&nbsp; <span class = "bold_letter">Release Date : </span>23 / 05 / 2016</p>
+                            </div>
+                            <div class = "item_description">
+                                <p>The future is now. Are you with us?</p>
+                            </div>
+                        </div>
+                        <div class = "item_buy">
+                            <div class = "item_price">
+                                <h2><label>RM 269.99</label></h2>
+                            </div>
+                            <div class = "to_buy">
+                                <a href = "#buying_form"><input type = "button" onclick = "ShowThis(this)" class = "buy_button" name = "Overwatch" id = "Overwatch" value = "Buy"/></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id = "clearing"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "clearing"></div>
+    <div id = "information">
+        <div class = "info_cover">
+            <p>More Information : </p>
+        </div>
+    </div>
+    <div id = "footer">
+        <div class = "footer_cover">
+            <div id = "shipping">
+                <h3>Shipping details : </h3>
+                <ul>
+                    <li> Malaysia : *free shipping</li>
+                    <li> Other Country : RM 20.00</li>
+                </ul>
+            </div>
+            <div id = "about_consoles">
+                <h3>Game Consoles : </h3>
+                <p>PS4 : </p>
+                <ul>
+                    <li><a href = "shoppg_playstation4_consoles_accs.html"> Consoles & Accessories</a></li>
+                    <li><a href = "shoppg_playstation4_games.html"> Games</a></li>
+                </ul>
+                <p>PSVR : </p>
+                <ul>
+                    <li><a href = "shoppg_playstationvr_consoles_accs.html"> Consoles & Accessories</a></li>
+                    <li><a href = "shoppg_playstationvr_games.html"> Games</a></li>
+                </ul>
+                <p>PSVita : </p>
+                <ul>
+                    <li><a href = "shoppg_playstationvita_consoles_accs.html"> Consoles & Accessories</a></li>
+                    <li><a href = "shoppg_playstationvita_games.html"> Games</a></li>
+                </ul>
+            </div>
+            <div id = "contact">
+                <h3>Contact Us : </h3>
+                <p> Telephone Number : 010-1234567</p>
+                <a href = "feedbackpg.html"> Give us your feedback</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "shortcut icon" href = "Images/title_logo.png">
+<link rel = "stylesheet" href = "CSS/css_register.css"/>
+<script type = "text/javascript" src = "Javascript/javascript_register.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#FFFFE7");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#FFFFFF");
+    });
+    $("#acc").click(function(){
+        $("#acceptTC").focus();
+        $("#acceptTC").click();
+    });
+});
+</script>
+<title>
+Gamerz - Register as a Member
+</title>
+</head>
+<body class = "back_image">
+    <header id = "header">
+        <div class = "logo">
+            <a href = "homepg.html"><img src = "Images/menu_logo.png" alt = "Site Logo" title = "To Home Page"/></a>
+        </div>
+    </header>
+    <div id = "form_cover">
+        <div class = "form">
+            <form name = "registerForm" onsubmit = "return CheckRegisterForm()" action = "">
+                <h1>Register To Become Member</h1>
+                <h3>Please input all the text area below : </h3>
+                <ul>
+                    <li><label>First Name : &nbsp;</label><div class = "reminder"><input type = "text" size = "30" name = "firstname" id = "firstname" value = "" placeholder = "Your First Name"/><span class = "reminder_text">Enter alphabet characters only</span></div></li>
+                    <li><label>Last Name : &nbsp;</label><div class = "reminder"><input type = "text" size = "30" name = "lastname" id = "lastname" value = "" placeholder = "Your Last Name"/><span class = "reminder_text">Enter alphabet characters only</span></div></li>
+                    <li><label>Username&nbsp; : &nbsp;</label><div class = "reminder"><input type = "text" size = "30" name = "username" id = "username" value = "" placeholder = "Username"/><span class = "reminder_text">Enter alphanumeric characters only</span></div></li>
+                    <li><label>Email Address : &nbsp;</label><div class = "reminder"><input type = "text" size = "30" name = "email" id = "email" value = "" placeholder = "Email"/><span class = "reminder_text">ex. xxxxxx68@gmail.com</span></div></li>
+                    <li><label>Password&nbsp; : &nbsp;</label><div class = "reminder"><input type = "password" size = "20" name = "password" id = "password" value = "" placeholder = "Password"/><span class = "reminder_text">* password should have length more than 8</span></div></li>
+                    <li><label>Confirmation Password : &nbsp;</label><div class = "reminder"><input type = "password" size = "20" name = "confirm_password" id = "confirm_password" value = "" placeholder = "Confirm Password"/><span class = "reminder_text">* same with password entered above</span></div></li>
+                    <li><label>Phone Number : &nbsp;</label><div class = "reminder"><input type = "text" size = "20" name = "phonenumber" id = "phonenumber" value = "" placeholder = "Phone No."/><span class = "reminder_text">Enter numeric characters only</span></div></li>
+                    <li><input type = "checkbox" name = "acceptTC" id = "acceptTC"/><label id = "acc"> Accept Terms & Conditions</label></li>
+                    <li><input type = "submit" name = "submit" id = "submit" value = "Register" title = "Register"/>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "reset" name = "reset" id = "reset" value = "Clear" title = "Clear All"/></li>
+                    <hr/>
+                    <li class = "having_account"><h2>Already a Member? <a href = "loginpg.html">Sign in or Login</a></h2></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

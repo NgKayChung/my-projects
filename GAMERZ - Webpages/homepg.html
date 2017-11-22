@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "shortcut icon" href = "Images/title_logo.png">
+<link rel = "stylesheet" href = "CSS/css_home.css">
+<link rel = "stylesheet" href = "CSS/css_home_dropdowns.css">
+<script type = "text/javascript" src = "Javascript/javascript_home.js"></script>
+<script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#PS4_").click(function(){
+        $(".consolesGames, .games_picture").fadeOut("fast", function(){
+            setPS4Games();
+        });
+        $(".consolesGames, .games_picture").fadeIn("fast");
+    });
+    $("#PSVR_").click(function(){
+        $(".consolesGames, .games_picture").fadeOut("fast", function(){
+            setPSVRGames();
+        });
+        $(".consolesGames, .games_picture").fadeIn("fast");
+    });
+    $("#PSVita_").click(function(){
+        $(".consolesGames, .games_picture").fadeOut("fast", function(){
+            setPSVitaGames();
+        });
+        $(".consolesGames, .games_picture").fadeIn("fast");
+    });
+    $("#pic1").click(function(){
+        $("#games_pic").fadeOut("fast", function(){
+            GetPicture1();
+        });
+        $("#games_pic").fadeIn("fast");
+    });
+    $("#pic2").click(function(){
+        $("#games_pic").fadeOut("fast", function(){
+            GetPicture2();
+        });
+        $("#games_pic").fadeIn("fast");
+    });
+    $("#pic3").click(function(){
+        $("#games_pic").fadeOut("fast", function(){
+            GetPicture3();
+        });
+        $("#games_pic").fadeIn("fast");
+    });
+});
+</script>
+<title>
+Gamerz - Order With Us | Play With Us
+</title>
+</head>
+<body id = "top" class = "back_colour">
+    <header id = "header">
+        <div class = "menu_cover">
+            <div class = "menu_logo">
+                <div class = "logo">
+	            <a target = "_self" href = "homepg.html">
+	                <img src = "Images/menu_logo.png" title = "GAMERZ" alt = "Homepage">
+                    </a>
+                </div>
+            </div>
+            <div class = "site_words"><label>Order With Us<br/>Play With Us</label></div>
+            <div id = "space"></div>
+            <div class = "aboutus_cover">
+                <div class = "about_us">
+                    <p>First time visit?<a href = "#about_us"> About Us</a></p> 
+                </div>
+            </div>
+            <div class = "acc_cover">
+                <div class = "acc_dropdown">
+	            <button class = "acc_dropbutton">Member</button>
+                        <div class = "acc_dropdown-content">
+                            <a target = "_self" href = "loginpg.html">Login</a>
+                            <a target = "_self" href = "registerpg.html">Register for an account</a>
+                        </div>
+                </div>
+            </div>
+            <div class = "link_ps">
+                <div class = "to_ps">
+                    <a target = "_blank" href = "https://asia.playstation.com/my/en/regional">
+                        <img src = "Images/playstation_logo.png" title = "To PS Site" alt = "PS_Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id = "clearing"></div>
+    <div id = "body_cover">
+        <div id = "consoles">
+            <div class = "ps4_cover">
+                <ul>
+                    <li class = "ps4_img"><img src = "Images/ps4_pic.png" title = "Playstation 4" alt = "PS4_Picture"></li>
+                    <li class = "ps4_button">
+                        <div class = "ps4_dropdown">
+                            <button class = "ps4_dropbutton">Playstation 4 <img src = "Images/down_arrow.ico"></button>
+                                <div class = "ps4_dropdown-content">
+                                    <a href = "shoppg_playstation4_consoles_accs.html">PS4 Consoles and Accessories</a>
+                                    <a href = "shoppg_playstation4_games.html">PS4 Games</a>
+                                </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class = "psvr_cover">
+                <ul>
+                    <li class = "psvr_img"><img src = "Images/psvr_pic.png" title = "Playstation VR" alt = "PSVR_Picture"></li>
+                    <li class = "psvr_button">
+                        <div class = "psvr_dropdown">
+                            <button class = "psvr_dropbutton">Playstation VR <img src = "Images/down_arrow.ico"></button>
+                                <div class = "psvr_dropdown-content">
+                                    <a href = "shoppg_playstationvr_consoles_accs.html">PSVR Consoles and Accessories</a>
+                                    <a href = "shoppg_playstationvr_games.html">PSVR Games</a>
+                                </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class = "psvita_cover">
+                <ul>
+                    <li class = "psvita_img"><img src = "Images/psvita_pic.png" title = "Playstation Vita" alt = "PSVita_Picture"></li>
+                    <li class = "psvita_button">
+                        <div class = "psvita_dropdown">
+                            <button class = "psvita_dropbutton">Playstation Vita <img src = "Images/down_arrow.ico"></button>
+                                <div class = "psvita_dropdown-content">
+                                    <a href = "shoppg_playstationvita_consoles_accs.html">PSVita Consoles and Accessories</a>
+                                    <a href = "shoppg_playstationvita_games.html">PSVita Games</a>
+                                </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id = "clearing"></div>
+    <div id = "games">
+        <div class = "games_cover">
+            <ul class = "consoles_bar">
+                <li><input type = "button" name = "consoles" id = "PS4_" value = "PS4"/></li>
+                <li><input type = "button" name = "consoles" id = "PSVR_" value = "PSVR"/></li>
+                <li><input type = "button" name = "consoles" id = "PSVita_" value = "PSVita"/></li>
+            </ul>
+            <ul class = "consolesGames">
+                <li class = "picture1">
+                    <button name = "pic1" id = "pic1" value = "pic1"><img src = "Images/Consoles_Games_Button/nioh.png" alt = "Nioh Icon" id = "consoles_games1"><span id = "game_name1">Nioh</span></button>
+                </li>
+                <li class = "picture2">
+                    <button name = "pic2" id = "pic2" value = "pic2"><img src = "Images/Consoles_Games_Button/bio.png" alt = "Biohazard 7 Icon" id = "consoles_games2"><span id = "game_name2">Biohazard 7</span></button>
+                </li>
+                <li class = "picture3">
+                    <button name = "pic3" id = "pic3" value = "pic3"><img src = "Images/Consoles_Games_Button/for_honor.png" alt = "For Honor Icon" id = "consoles_games3"><span id = "game_name3">For Honor</span></a>
+                </li>
+            </ul>
+            <div class = "games_picture">
+                <img src = "Images/Games_Pictures/nioh_pic.jpg" alt = "Game_Picture" title = "Nioh" name = "games_pic" id = "games_pic">
+                <div class = "buy_now">
+                    <a href = "shoppg_playstation4_games.html" id = "link" name = "link" class = "buy">Buy Now!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "about_us">
+        <div class = "aboutUs_label1">
+            <div class = "aboutUs_title">
+                <label>About GAMERZ</label>
+            </div>
+        </div>
+        <div class = "aboutUs_label2">
+            <div class = "aboutUs_content">
+                <label><span class = "bletter">GAMERZ</span> is a website that allowing all users to order Playstation game consoles, accessories and video games online. Boring at home? Here is the place for you to find some entertainment.<br/><br/><span class = "bletter">Make use your free time and play</span><br/>Every time you switched on television but no channels or shows that entertain you. If you are having the PS4, along with PSVR, you can enjoy the gaming world and play through your content. PS4 is equipped with high-quality graphics and unbelievable audio to let you enjoy games at home.<br/><br/><span class = "bletter">Want to play outside your home?</span><br/>No problem because PSVita can let you enjoy gaming even if you are outside your house. A portable handheld console that can be bring out home and play everywhere.<br/><br/>The gaming consoles available here not only come with a manufacturers warranty, but also are quite affordable too. To play all your favourite games on an advanced gaming device, buy gaming consoles online from GAMERZ today!</label>
+            </div>
+        </div>
+    </div>
+    <div id = "clearing"></div>
+    <div id = "to_top">
+        <div class = "totopbtn">
+            <a href = "#top">Back to top</a>
+        </div>
+    </div>
+    <div id = "information">
+        <div class = "info_cover">
+            <p>More Information : </p>
+        </div>
+    </div>
+    <div id = "footer">
+        <div class = "footer_cover">
+            <div id = "shipping">
+                <h3>Shipping details : </h3>
+                <ul>
+                    <li> Malaysia : *free shipping</li>
+                    <li> Other Country : RM 20.00</li>
+                </ul>
+            </div>
+            <div id = "about_consoles">
+                <h3>Game Consoles : </h3>
+                <p>PS4 : </p>
+                <ul>
+                    <li><a href = "shoppg_playstation4_consoles_accs.html"> Consoles & Accessories</a></li>
+                    <li><a href = "shoppg_playstation4_games.html"> Games</a></li>
+                </ul>
+                <p>PSVR : </p>
+                <ul>
+                    <li><a href = "shoppg_playstationvr_consoles_accs.html"> Consoles & Accessories</a></li>
+                    <li><a href = "shoppg_playstationvr_games.html"> Games</a></li>
+                </ul>
+                <p>PSVita : </p>
+                <ul>
+                    <li><a href = "shoppg_playstationvita_consoles_accs.html"> Consoles & Accessories</a></li>
+                    <li><a href = "shoppg_playstationvita_games.html"> Games</a></li>
+                </ul>
+            </div>
+            <div id = "contact">
+                <h3>Contact Us : </h3>
+                <p> Telephone Number : 010-1234567</p>
+                <a href = "feedbackpg.html"> Give us your feedback</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

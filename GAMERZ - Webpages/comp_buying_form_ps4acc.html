@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel = "stylesheet" href = "CSS/css_comp_shoppg.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type = "text/javascript">
+function CalculateSeconds()
+{
+    var s = document.getElementById("second"); // s.innerHTML starting value : 5
+    
+    if(s.innerHTML > 0)
+    {
+        s.innerHTML = (s.innerHTML - 1);
+        setTimeout("CalculateSeconds()", 1000);
+    }
+    else
+    {
+        window.location = "shoppg_playstation4_consoles_accs.html";
+    }
+}
+
+$(document).ready(function(){
+    setTimeout("CalculateSeconds()", 1000);
+});
+</script>
+<title>
+Redirecting to Home Page...
+</title>
+</head>
+<body>
+    <div id = "redirecting">
+        <h1>Thank you for Buying Item from GAMERZ</h1>
+        <h3>You will be redirected back to the purchase page in <span id = "second" name = "second">5</span> seconds.</h3>
+        <div class = "loader">
+            <img src = "Images/redirect_loader.gif" id = "rLoader"/>
+        </div>
+    </div>
+</body>
+</html>

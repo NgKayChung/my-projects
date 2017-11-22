@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "shortcut icon" href = "Images/title_logo.png">
+<link rel = "stylesheet" href = "CSS/css_login.css"/>
+<script type = "text/javascript" src = "Javascript/javascript_login.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("border", "1px solid grey");
+        $(this).css("background-color", "#FFFFE0");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#FFFFFF");
+    });
+    $("#signedIn").click(function(){
+        $("#keep_signed").focus();
+        $("#keep_signed").click();
+    });
+});
+</script>
+<title>
+Gamerz - Login
+</title>
+</head>
+<body class = "back_image">
+    <header id = "header">
+        <div class = "logo">
+            <a href = "homepg.html"><img src = "Images/menu_logo.png" alt = "Site Logo" title = "To Home Page"/></a>
+        </div>
+    </header>
+    <div id = "form_cover">
+        <div class = "form">
+            <form name = "loginForm" onsubmit = "return checkLoginForm()" action = "">
+                <h1>Sign In To GAMERZ</h1>
+                <ul>
+                    <li><label>Email Address : &nbsp;</label><div class = "reminder"><input type = "text" size = "30" name = "email" id = "email" value = "" placeholder = "Email Address"/><span class = "reminder_text">ex. xxxxx123@gmail.com</span></div></li>
+                    <div class = "selection"><li><label>OR</label></li></div>
+                    <li><label>Username : &nbsp;</label><div class = "reminder"><input type = "text" size = "30" name = "username" id = "username" value = "" placeholder = "Username"/><span class = "reminder_text">Username consists of only alphanumeric characters</span></div></li>
+                    <li><label>Password&nbsp; : &nbsp;</label><div class = "reminder"><input type = "password" size = "30" name = "password" id = "password" value = "" placeholder = "Password"/><span class = "reminder_text">* password should have length more than 8</span></div></li>
+                    <li><input type = "checkbox" name = "keep_signed" id = "keep_signed"/><label id = "signedIn"> Keep Me Signed In</label></li>
+                    <li><input type = "submit" name = "submit" id = "submit" value = "Sign In" title = "Sign In"/>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "reset" name = "reset" id = "reset" value = "Clear" title = "Clear All"/></li>
+                    <hr/>
+                    <li class = "no_account"><h2>Not yet a Member? <a href = "registerpg.html">Create an account</a></h2></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

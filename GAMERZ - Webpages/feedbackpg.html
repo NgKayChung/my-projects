@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "shortcut icon" href = "Images/title_logo.png">
+<link rel = "stylesheet" href = "CSS/css_feedbackpg.css"/>
+<script type = "text/javascript" src = "Javascript/javascript_feedback.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#FFFFE0");
+    });
+    $("textarea").focus(function(){
+        $(this).css("background-color", "#FFFFE0");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#FFFFFF");
+    });
+    $("textarea").blur(function(){
+        $(this).css("background-color", "#FFFFFF");
+    });
+    $("#feedback").keyup(function(){
+        calculateLength(this);
+    });
+    $("#reset").click(function(){
+        setZero();
+    });
+});
+</script>
+<title>
+Gamerz - Give us your feedback
+</title>
+</head>
+<body class = "back_image">
+    <header id = "header">
+        <div class = "logo">
+            <a href = "homepg.html"><img src = "Images/menu_logo.png" alt = "Site Logo" title = "To Home Page"/></a>
+        </div>
+    </header>
+    <div id = "form_cover">
+        <div class = "form">
+            <form name = "feedbackForm" onsubmit = "return checkFeedbackForm()" action = "">
+                <h1>Feedback Form</h1>
+                <hr/>
+                <h3>Please fill in the following : </h3>
+                <ul>
+                    <li><label>Username&nbsp; : &nbsp;<div class = "reminder"><input type = "text" size = "20" name = "username" id = "username" placeholder = "Username"/><span class = "reminder_text">Username consists of alphanumeric characters only</span></div></li>
+                    <li><label>Feedback&nbsp; : &nbsp;</label></li>
+                    <li><textarea name = "feedback" id = "feedback" maxlength = "200" placeholder = "Feedback here..."></textarea><span class = "max"><span name = "length" id = "length">0</span> of 200</span></li>
+                    <li><input type = "submit" name = "submit" id = "submit" value = "Submit" title = "Submit"/>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "reset" name = "reset" id = "reset" value = "Clear" title = "Clear All"/></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
