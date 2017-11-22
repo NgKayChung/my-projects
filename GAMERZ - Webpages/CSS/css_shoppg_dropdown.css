@@ -1,0 +1,54 @@
+.acc_dropbutton
+{
+    cursor : pointer;
+    color : #d9d9d9;
+    font-size : 25px;
+    font-weight : bold;
+    padding : 3px;
+    border : none;
+    outline : none;
+    background-color : Transparent;
+}
+
+.acc_dropdown
+{
+    position : relative;
+    display : inline-block;
+}
+
+.acc_dropdown-content
+{
+    display : none;
+    position : absolute;
+    background-color : #3333cc;
+    min-width : 150px; 
+    margin-left : -10px;
+    padding : 10px 12px;
+    border-radius : 4px;
+    z-index : 1;
+}
+
+.acc_dropdown-content a
+{
+    color : #ccebff;
+    padding : 4px 6px;
+    text-decoration : none;
+    display : block;
+    border-radius : 3px;
+}
+
+.acc_dropbutton:hover
+{
+    text-decoration : underline;
+    transform : scale(1.1, 1.1);
+}
+
+.acc_dropdown:hover .acc_dropdown-content
+{
+    display : block;
+}
+
+.acc_dropdown-content a:hover
+{
+    background-color : #00004d;
+}

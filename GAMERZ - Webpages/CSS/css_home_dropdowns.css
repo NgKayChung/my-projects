@@ -1,0 +1,182 @@
+.acc_dropbutton
+{
+    cursor : pointer;
+    color : #d9d9d9;
+    font-size : 25px;
+    font-weight : bold;
+    padding : 3px;
+    border : none;
+    outline : none;
+    background-color : Transparent;
+}
+
+.acc_dropdown
+{
+    position : relative;
+    display : inline-block;
+}
+
+.acc_dropdown-content
+{
+    display : none;
+    position : absolute;
+    background-color : #3333cc;
+    min-width : 150px;
+    padding : 10px 12px;
+    border-radius : 4px;
+    z-index : 1;
+}
+
+.acc_dropdown-content a
+{
+    color : #ccebff;
+    padding : 4px 6px;
+    text-decoration : none;
+    display : block;
+    border-radius : 3px;
+}
+
+.acc_dropbutton:hover
+{
+    text-decoration : underline;
+    transform : scale(1.1, 1.1);
+}
+
+.acc_dropdown:hover .acc_dropdown-content
+{
+    display : block;
+}
+
+.acc_dropdown-content a:hover
+{
+    background-color : #00004d;
+}
+
+.ps4_dropbutton
+{
+    font-size : 30px;
+    color : blue;
+    border-radius : 5px;
+    border : none;
+    outline : none;
+    background : none;
+    cursor : pointer;
+}
+
+.ps4_dropdown
+{
+    position : relative;
+    display : inline-block;
+}
+
+.ps4_dropdown-content, .psvr_dropdown-content, .psvita_dropdown-content
+{
+    display : none;
+    position : absolute;
+    background : linear-gradient(to bottom, #c2ebff -47%, #5cbdfa 147%);
+    min-width : 230px;
+    border-radius : 4px;
+    padding : 10px 5px;
+    z-index : 1;
+}
+
+.ps4_dropdown-content a
+{
+    color : #404040;
+    padding : 4px 6px;
+    text-decoration : none;
+    display : block;
+}
+
+.ps4_dropbutton:hover
+{
+    border : 1px solid blue;
+    text-decoration : none;
+    transform : scale(1.1, 1.1);
+}
+
+.ps4_dropdown:hover .ps4_dropdown-content
+{
+    display : block;
+}
+
+.ps4_dropdown-content a:hover, .psvr_dropdown-content a:hover, .psvita_dropdown-content a:hover
+{
+    cursor : pointer;
+    border-radius : 5px;
+    background-color : #57ADE8;
+}
+
+.psvr_dropbutton
+{
+    font-size : 30px;
+    color : blue;
+    border-radius : 5px;
+    border : none;
+    outline : none;
+    background : none;
+    cursor : pointer;
+}
+
+.psvr_dropdown
+{
+    position : relative;
+    display : inline-block;
+}
+
+.psvr_dropdown-content a
+{
+    color : #404040;
+    padding : 4px 6px;
+    text-decoration : none;
+    display : block;
+}
+
+.psvr_dropbutton:hover
+{
+    border : 1px solid blue;
+    text-decoration : none;
+    transform : scale(1.1, 1.1);
+}
+
+.psvr_dropdown:hover .psvr_dropdown-content
+{
+    display : block;
+}
+
+.psvita_dropbutton
+{
+    font-size : 30px;
+    color : blue;
+    border-radius : 5px;
+    border : none;
+    outline : none;
+    background : none;
+    cursor : pointer;
+}
+
+.psvita_dropdown
+{
+    position : relative;
+    display : inline-block;
+}
+
+.psvita_dropdown-content a
+{
+    color : #404040;
+    padding : 4px 6px;
+    text-decoration : none;
+    display : block;
+}
+
+.psvita_dropbutton:hover
+{
+    border : 1px solid blue;
+    text-decoration : none;
+    transform : scale(1.1, 1.1);
+}
+
+.psvita_dropdown:hover .psvita_dropdown-content
+{
+    display : block;
+}

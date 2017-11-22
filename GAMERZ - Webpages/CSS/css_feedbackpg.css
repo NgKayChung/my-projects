@@ -1,0 +1,200 @@
+body
+{
+    font-size : 13px;
+    font-family : Arial, serif;
+    background : url("../Images/feedbackpg_background.jpg");
+    background-size : cover;
+    background-repeat : no-repeat;
+}
+
+li
+{
+    list-style-type : none;
+}
+
+#header
+{
+    position : relative;
+    margin : 0;
+    padding : 0;
+    min-width : 1000px;
+    min-height : 100px;
+}
+
+.logo
+{
+    align : center;
+    padding-left : 550px;
+}
+
+.logo img
+{
+    width : 240px;
+    height : 100px;
+}
+
+#form_cover
+{
+    width : 500px;
+    min-height : 600px;
+    margin : 20px 425px;
+    border-radius : 10px;
+    background-color : #FFD119;
+}
+
+.form
+{
+    position : absolute;
+    width : 480px;
+    min-height : 580px;
+    margin : 10px;
+    border-radius : 2px;
+    background-color : white;
+}
+
+.form h1
+{
+    padding-left : 140px;
+}
+
+.form h3
+{
+   padding-left : 12px;
+}
+
+.form hr
+{
+    border : 1px dotted blue;
+}
+
+.form ul
+{
+    padding-left : 0px;
+    line-height : 40px;
+}
+
+.form li
+{
+    margin : 15px 10px;
+}
+
+.form label
+{
+    font-size : 20px;
+}
+
+.form input
+{
+    border : 1px solid grey;
+    padding : 6px 2px;
+    border-radius : 5px;
+    font-size : 15px;
+    box-shadow : inset -1px 3px 4px 0px #E6E6E6;
+    outline : none;
+}
+
+.form input:focus
+{
+    border : 1px solid #4040D9;
+    box-shadow : 0px 0px 5px 2px #9999EB;
+}
+
+textarea
+{
+    font-family : inherit;
+    min-width : 280px;
+    min-height : 90px;
+    rows : 10px;
+    cols : 40px;
+    border-radius : 4px;
+    resize : none;
+}
+
+.max
+{
+    color : grey;
+    position : absolute;
+    margin-left : -64px;
+    margin-top : 68px;
+}
+
+.reminder 
+{
+    position: relative;
+    display: inline-block;
+}
+
+.reminder_text 
+{
+    visibility: hidden;
+    background-color: white;
+    width: 400px;
+    text-align: center;
+    font-size : 16px;
+    border-radius: 6px;
+    border : 1px solid black;
+    position: absolute;
+    z-index: 1;
+    margin : 0px 0px 0px 10px;
+    opacity : 0;
+    transition: all 0.2s;
+}
+
+.reminder_text::before 
+{
+    content: "";
+    position: absolute;
+    top : 35%;
+    left : 0%;
+    margin-left : -12px;
+    border : 6px solid;
+    border-color: transparent black transparent transparent;
+}
+
+.reminder:hover .reminder_text 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+#submit
+{
+    margin : 20px 50px;
+    padding : 5px 40px;
+    border : 1px solid black;
+    border-radius : 3px;
+    box-shadow : none;
+    background : linear-gradient(to bottom, #FFFFFF 0%, #0033CC 160%);
+    cursor : pointer;
+}
+
+#submit:hover, #submit:focus
+{
+    background : linear-gradient(to bottom, #FFFFFF 0%, #0033CC 300%);
+}
+
+#submit:active
+{
+    background : linear-gradient(to bottom, #FFFFFF 0%, #66FFFF 180%);
+}
+
+#reset
+{
+    margin : 20px 30px;
+    padding : 5px 45px;
+    border : 1px solid black;
+    border-radius : 3px;
+    box-shadow : none;
+    background : linear-gradient(to bottom, #FFFFFF 0%, #FF0000 140%);
+    cursor : pointer;
+}
+
+#reset:hover, #reset:focus
+{
+    background : linear-gradient(to bottom, #FFFFFF 0%, #FF0000 250%);
+}
+
+#reset:active
+{
+    background: linear-gradient(to bottom, #ffffff 0%, #ff9999 200%);
+}

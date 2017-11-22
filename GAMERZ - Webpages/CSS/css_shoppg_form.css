@@ -1,0 +1,191 @@
+#buyForm_cover
+{
+    position : fixed;
+    z-index : 2;
+    margin : -8px;
+    padding : 0;
+    width : 100%;
+    height : 100%;
+    background-color : rgba(51,51,51,0.4);
+    overflow : hidden;
+    display : none;
+}
+
+.form_wrapper
+{
+    position : relative;
+    padding : 300px;
+}
+
+.cancel_button
+{
+    position : absolute;
+    margin-left : 750px;
+    content : "X";
+    color : white;
+    font-weight : 900;
+    font-size : 30px;
+    text-shadow : -1px 2px 5px #000;
+    padding : 10px;
+    border : 3px solid black;
+    border-radius : 8px;
+    box-shadow : inset 3px -3px 20px #000;
+    background : none;
+    outline : none;
+    z-index : 4;
+    cursor : pointer;
+}
+
+.cancel_button:hover
+{
+    box-shadow : inset 3px -3px 20px #fff;
+}
+
+.cancel_button:active
+{
+    border-color : grey;
+}
+
+#buying_form
+{
+    min-width : 500px;
+    min-height : 645px;
+    background-color : white;
+    border-radius : 5px;
+    border : 10px solid blue;
+    z-index : 5;
+}
+
+#buying_form h3
+{
+    font-family : Arial;
+}
+
+.formtop
+{
+    margin : 10px;
+}
+
+#itemPicture
+{
+    position : relative;
+    float : left;
+    margin-left : 20px;
+    width : 140px;
+}
+
+#buyItem
+{
+    float : left;
+    margin-left : 10px;
+    min-width : 300px;
+}
+
+.ItemName h3
+{
+    margin : 0;
+}
+
+.ItemName
+{
+    float : left;
+    margin-bottom : 10px;
+}
+
+.ItemNo
+{
+    margin-bottom : 10px;
+}
+
+.uInput
+{
+    margin-top : 5px;
+    margin-left : 20px;
+}
+
+.inputName
+{
+    margin : 0;
+}
+
+.inputtxt
+{
+    border : 1px solid grey;
+    margin : 0;
+    padding : 3px 2px;
+    border-radius : 5px;
+    font-size : 15px;
+    box-shadow : inset -1px 3px 4px 0px #E6E6E6;
+    outline : none;
+}
+
+.inputtxt:focus
+{
+    border : 1px solid #4040D9;
+    box-shadow : 0px 0px 5px 2px #9999EB;
+}
+
+.pSize
+{
+    margin : 3px 0px;
+}
+
+#country
+{
+    margin : 5px 0px;
+    padding : 2px;
+    border-radius : 5px;
+}
+
+.firstName_cover, .lastName_cover, .address_cover, .address_cover2, .card_cover, label
+{
+    display : inline-block;
+}
+
+#submit
+{
+    margin : 5px 75px;
+    padding : 5px 15px;
+    border-radius : 10px;
+    border : 1px solid #0033cc;
+    outline : none;
+    box-shadow : 0px 2px #000066;
+    background : linear-gradient(to bottom, #ffffff -50%, #0066cc 100%);
+    color : white;
+    cursor : pointer;
+}
+
+#submit:hover, #submit:focus
+{
+    background : linear-gradient(to bottom, #ffffff -50%, #3399ff 100%);
+}
+
+#submit:active
+{
+    border-width : 2px 1px 1px;
+    box-shadow : none;
+}
+
+#reset
+{
+    margin : 5px 15px;
+    padding : 5px 15px;
+    border-radius : 10px;
+    border : 1px solid #cc0000;
+    outline : none;
+    box-shadow : 0px 2px #800000;
+    background: linear-gradient(to bottom, #ffffff -50%, #ff0000 100%);
+    color : white;
+    cursor : pointer;
+}
+
+#reset:hover, #reset:focus
+{
+    background : linear-gradient(to bottom, #FFFFFF -50%, #ff4d4d 100%);
+}
+
+#reset:active
+{
+    border-width : 2px 1px 1px;
+    box-shadow : none;
+}

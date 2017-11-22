@@ -1,0 +1,551 @@
+body.back_colour
+{
+    background : linear-gradient(to bottom, #000026 10%, #ffffff 138%);
+}
+
+li
+{
+    list-style-type : none;
+}
+
+#header
+{
+    position : relative;
+    z-index : 1;
+    border-radius : 4px;
+    min-width : 1200px;
+    min-height : 100px;
+    background-image : url("../Images/menu_cover.png");
+}
+
+#header image
+{
+    opacity : 0.8;
+}
+
+.menu_cover
+{
+    min-width : 1200px;
+    min-height : 100px;
+}
+
+.menu_logo
+{
+    float : left;
+    padding-left : 2px;
+}
+
+.logo img
+{
+    width : 240px;
+    height : 100px;
+}
+
+.site_words
+{
+    float : left;
+    padding-top : 12px;
+    color : #d9d9d9;
+    font-size : 200%;
+    font-family : Arial;
+}
+
+#space
+{
+    float : left;
+    padding : 15px 8px 12px 4px;
+    min-width : 500px;
+    min-height : 60px;
+}
+
+.aboutus_cover
+{
+    float : left;
+    padding-top : 60px;
+    padding-right : 10px;
+    min-width : 110px;
+    min-height : 50px;
+}
+
+.about_us p
+{
+    color : #d9d9d9;
+}
+
+.about_us a
+{
+    text-decoration : none;
+}
+
+.about_us a:hover
+{
+    text-decoration : underline;
+}
+
+.about_us a:visited
+{
+    color : blue;
+}
+
+.acc_cover
+{
+    float : left;
+    padding-top : 65px;
+}
+
+.link_ps
+{
+    float : left;
+    padding-top : 60px;
+    padding-left : 20px;
+}
+
+.to_ps img
+{
+    trasition-duration : 0.3s;
+}
+
+.to_ps img:hover
+{
+    transform : scale(1.1, 1.1);
+}
+
+#clearing
+{
+    clear : both;
+}
+
+#body_cover
+{
+    margin : 20px 10px;
+    min-width : 900px;
+    min-height : 300px;
+    background : linear-gradient(to bottom, #000000 -500%, #ffffff 100%);
+}
+
+#consoles
+{
+    margin : 10px 80px;
+    padding : 10px;
+    min-width : 1200px;
+    min-height : 300px;
+}
+
+.ps4_cover, .psvr_cover
+{
+    position : relative;
+    width : 300px;
+    height : 300px;
+    background-color : Transparent;
+    float : left;
+    margin-left : 30px;
+}
+
+.psvita_cover
+{
+    position : relative;
+    width : 450px;
+    height : 300px;
+    background-color : Transparent;
+    float : left;
+    margin-left : 30px;
+}
+
+.ps4_img img, .psvr_img img
+{
+    width : 220px;
+    height : 200px;
+    transition-duration : 0.2s;
+}
+
+.psvita_img img
+{
+    width : 370px;
+    height : 200px;
+    transition-duration : 0.2s;
+}
+
+.ps4_img img:hover, .psvr_img img:hover, .psvita_img img:hover
+{
+    transform : scale(1.1, 1.1);
+}
+
+.ps4_button
+{
+    padding : 20px 10px;
+}
+
+.psvr_button
+{
+    padding-top : 20px;
+}
+
+.psvita_button
+{
+    padding : 20px 65px;
+}
+
+.ps4_dropbutton img, .psvr_dropbutton img, .psvita_dropbutton img
+{
+    vertical-align : 5px;
+    width : 10px;
+    height : 10px;
+}
+
+#games
+{
+    position : relative;
+    min-width : 1200px;
+    min-height : 300px;
+    padding : 20px;
+}
+
+.games_cover
+{
+    margin : 0px 45px;
+    width : 1200px;
+    height : 350px;
+    background-color : white;
+}
+
+.consoles_bar
+{
+    margin : 0;
+    padding : 0;
+    height : 29px;
+    width : 100%;
+}
+
+.consoles_bar input
+{
+    float : left;
+    border : 1px solid #DADADA;
+    padding : 6px 181.8px;
+    background-color : #F2F2F2;
+    cursor : pointer;
+    overflow : hidden;
+}
+
+.consoles_bar input:hover
+{
+    background : linear-gradient(to bottom left, #ffffff 0%, #e6e6e6 100%);
+}
+
+.consoles_bar input:active
+{
+    background: linear-gradient(to bottom left, #f2f2f2 -20%, #8c8c8c 100%);
+}
+
+.consoles_bar input:visited
+{
+    border : none;
+}
+
+.consolesGames
+{
+    float : left;
+    width : 280px;
+    height : 321px;
+    margin : 0;
+    padding-left : 20px;
+}
+
+.consolesGames li
+{
+    padding-top : 30px;
+    padding-bottom : 20px;
+}
+
+.consolesGames button
+{
+    border : none;
+    outline : none;
+    padding : 0;
+    background-color : Transparent;
+    font-size : 110%;
+    font-family : serif;
+    cursor : pointer;
+}
+
+.consolesGames span
+{
+    vertical-align : -15px;
+    transition-duration : 0.05s;
+}
+
+.consolesGames span:hover
+{
+    font-weight : bold;
+}
+
+.consolesGames img
+{
+    float : left;
+    width : 80px;
+    height : 50px;
+    transition-duration : 0.2s;
+}
+
+.consolesGames img:hover
+{
+    transform : scale(1.1, 1.1);
+}
+
+.games_picture
+{
+    float : left;
+    width : 900px;
+    height : 321px;
+    background-color : white;
+    overflow : hidden;
+}
+
+.games_picture img
+{
+    width : 900px;
+    height : 321px;
+}
+
+.buy_now
+{
+    position : absolute;
+    margin-top : -60px;
+    margin-left : 760px;
+}
+
+.buy
+{
+    font-size : 160%;
+    text-decoration : none;
+    border : 2px solid black;
+    border-radius : 6px;
+    background : linear-gradient(to top right, yellow -20%, white 160%);
+}
+
+.buy:visited
+{
+    color : blue;
+}
+
+#about_us
+{
+    position : relative;
+    padding : 10px 60px;
+    min-width : 700px;
+    min-height : 260px;
+}
+
+.aboutUs_label1
+{
+    padding : 10px 20px;
+    background-color : white;
+    border : 1px solid blue;
+}
+
+.aboutUs_title
+{
+    font-size : 150%;
+    font-weight : 900;
+}
+
+.aboutUs_label2
+{
+    padding : 10px 20px;
+    background-color : white;
+    border : 1px solid blue;
+    border-top : none;
+}
+
+.aboutUs_content
+{
+    font-size : 22px;
+}
+
+.bletter
+{
+    font-weight : bold;
+}
+
+#to_top
+{
+    padding : 10px;
+}
+
+.totopbtn a
+{
+    border : none;
+    border-radius : 4px;
+    background-color : #2d2d86;
+    color : #99d6ff;
+    text-align : center;
+    text-decoration : none;
+    margin : 10px 65px;
+    padding : 10px 550px;
+    transition : all 0.2s;
+    cursor : pointer;
+}
+
+.totopbtn a:hover
+{
+    background-color : #9f9fdf;
+}
+
+/*More Information*/
+#information
+{
+    margin : 10px 0px;
+    width : 100%;
+    min-height : 20px;
+}
+
+.info_cover
+{
+    border-radius : 3px;
+    background-color : #000066;
+}
+
+.info_cover p
+{
+    margin : 0;
+    margin-left : 2px;
+    color : white;
+}
+
+/*Footer*/
+#footer
+{
+    min-width : 1000px;
+    min-height : 300px;
+    margin : 0;
+}
+
+.footer_cover
+{
+    position : relative;
+    max-width : 100%;
+    min-height : 300px;
+    border-radius : 10px;
+    background-color : black;
+}
+
+
+/*Shipping Details*/
+#shipping
+{
+    float : left;
+    padding : 0px 50px;
+    min-width : 100px;
+    height : 300px;
+}
+
+#shipping h3
+{
+    border-bottom : 1px solid grey;
+    margin : 15px 0px;
+    color : #6680e2;
+}
+
+#shipping p
+{
+    margin : 10px 0px;
+    color : #b2e2f2;
+}
+
+#shipping ul
+{
+    padding-left : 10px;
+}
+
+#shipping li
+{
+    line-height : 25px;
+    color : #bfbfd9;
+}
+
+#shipping li:before
+{
+    content : "\2bc8";
+    color : #EBF5FF;
+}
+
+/*Game Consoles*/
+#about_consoles
+{
+    float : left;
+    padding : 0px 250px;
+    min-width : 100px;
+    height : 300px;
+}
+
+#about_consoles h3
+{
+    border-bottom : 1px solid grey;
+    margin : 15px 0px;
+    color : #6680e2;
+}
+
+#about_consoles p
+{
+    margin : 5px 0px;
+    color : #b2e2f2;
+}
+
+#about_consoles ul
+{
+    padding-left : 10px;
+}
+
+#about_consoles li
+{
+    line-height : 18px;
+    color : #EBF5FF;
+}
+
+#about_consoles li:before
+{
+    content : "\2bc8";
+}
+
+#about_consoles a
+{
+    text-decoration : none;
+    color : #D9D9D9;
+}
+
+/*Contact Us*/
+#contact
+{
+    float : left;
+    padding : 0px 10px;
+    min-width : 100px;
+    height : 300px;
+}
+
+#contact h3
+{
+    border-bottom : 1px solid grey;
+    margin : 15px 0px;
+    color : #6680e2;
+}
+
+#contact p
+{
+    margin : 5px 0px;
+    color : #b2e2f2;
+}
+
+#contact p:before
+{
+    content: "\1f4de";
+}
+
+#contact a
+{
+    text-decoration : none;
+    color : white;
+}
+
+#contact a:before
+{
+    content: "\1f4e7";
+}

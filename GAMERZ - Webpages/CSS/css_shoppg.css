@@ -1,0 +1,458 @@
+li
+{
+    list-style-type : none;
+}
+
+h2
+{
+    display : inline-block;
+}
+
+body.back_colour
+{
+    background: linear-gradient(to bottom, #000099 0%, #ffffff 50%, #ffffff 80%, grey 100%);
+}
+
+#header
+{
+    position : relative;
+    z-index : 1;
+    border-radius : 4px;
+    min-width : 1200px;
+    min-height : 100px;
+    background-image : url("../Images/menu_cover.png");
+}
+
+#header image
+{
+    opacity : 0.8;
+}
+
+.menu_cover
+{
+    min-width : 1200px;
+    min-height : 100px;
+}
+
+.menu_logo
+{
+    float : left;
+    padding-left : 2px;
+}
+
+.logo img
+{
+    width : 240px;
+    height : 100px;
+}
+
+.site_words
+{
+    float : left;
+    padding-top : 12px;
+    color : #d9d9d9;
+    font-size : 200%;
+    font-family : Arial;
+}
+
+#space
+{
+    float : left;
+    padding : 15px 8px 12px 4px;
+    min-width : 720px;
+    min-height : 60px;
+}
+
+.acc_cover
+{
+    float : left;
+    padding-top : 65px;
+}
+
+#clearing
+{
+    clear : both;
+}
+
+#categories
+{
+    position : relative;
+    float : left;
+    padding : 10px;
+    width : 300px;
+    height : 300px;
+}
+
+#categories_cover
+{
+    width : 300px;
+    height : 300px;
+}
+
+.categories_list
+{
+    padding-left : 0;
+    cursor : pointer;
+}
+
+.categories_list li
+{
+    padding : 0px;
+    font-size : 120%;
+    border : 2px solid grey;
+    border-top : none;
+    border-radius : 8px;
+    border-bottom-right-radius : 25px;
+    cursor : pointer;
+    color : white;
+}
+
+.categories_list label
+{
+    cursor : pointer;
+}
+
+#Categories_show
+{
+    padding : 10px 5px;
+    border-top : 2px solid grey;
+    background : linear-gradient(to top, #000099 0%, #ffffff 110%);
+    text-shadow : 0px 2px 2px #000;
+}
+
+#Categories_show:hover
+{
+    background : linear-gradient(to top, #3366ff 0%, #ffffff 110%);
+}
+
+#Categories_show:active
+{
+    background : linear-gradient(to top, #0066cc 0%, #ffffff 110%);
+}
+
+.cons_categories
+{
+    display : none;
+    background : linear-gradient(to bottom, #ccffff -30%, #000099 100%);
+    text-shadow : -1px 1px 2px #fff;
+}
+
+.cons_cat
+{
+    padding : 10px 0px;
+    font-size : 110%;
+}
+
+.cons_cat:hover
+{
+    background : linear-gradient(to bottom, #ffffff 0%, #0066cc 100%);
+    border-radius : 8px;
+    border-bottom-right-radius : 25px;
+}
+
+.cons_cat:active
+{
+    background : linear-gradient(to bottom, #ffffff 0%, #0033cc 100%);
+}
+
+.sub-list
+{
+    padding : 0;
+    display : none;
+}
+
+.sub-list li
+{
+    padding : 10px 20px;
+    border : none;
+}
+
+.sub-list a
+{
+    text-decoration : none;
+    color : inherit;
+}
+
+.sub-list li:hover
+{
+    background : linear-gradient(to bottom, #ffffff -10%, #000099 80%, #000000 140%);
+}
+
+.sub-list li:active
+{
+    background : linear-gradient(to bottom, #ffffff -10%, #000066 80%, #000000 140%);
+}
+
+#purchase
+{
+    float : left;
+    position : relative;
+    margin : 25px;
+}
+
+#purchase_cover
+{
+    min-width : 900px;
+    min-height : 1000px;
+    background-color : white;
+    border : 1px solid black;
+    border-radius : 5px;
+}
+
+.consoles_name
+{
+    padding : 10px 0px 10px 20px;
+    background-color : black;
+}
+
+#cname
+{
+    font-size : 150%;
+    color : white;
+}
+
+.consoles_categories
+{
+    padding : 10px 0px 10px 10px;
+    background-color : #060647;
+}
+
+#ccategories
+{
+    font-size : 150%;
+    color : white;
+}
+
+.item
+{
+    width : 100%;
+    height : 240px;
+}
+
+.item img
+{
+    float : left;
+    margin : 10px 0px 0px 10px;
+    padding : 30px;
+    width : 120px;
+}
+
+.item_details
+{
+    float : left;
+    padding : 35px 10px 10px 10px;
+}
+
+.iName
+{
+    margin : 0;
+    color : navy;
+}
+
+.bold_letter
+{
+    font-weight : bold;
+}
+
+.item_buy
+{
+    float : right;
+    padding : 30px 50px 10px 50px;
+}
+
+.item_price
+{
+    margin-left : 5px;
+}
+
+.to_buy
+{
+    padding-left : 10px;
+}
+.buy_button
+{
+    border-radius : 10px;
+    border : 1px solid #0033cc;
+    outline : none;
+    padding : 3px 30px;
+    font-size : 30px;
+    box-shadow : 0px 2px #000066;
+    background: linear-gradient(to bottom, #ffffff -50%, #0066cc 100%);
+    color : white;
+    cursor : pointer;
+}
+
+.buy_button:hover
+{
+    background: linear-gradient(to bottom, #ffffff -50%, #3399ff 100%);
+}
+
+.buy_button:active
+{
+    border-width : 2px 1px 1px;
+    box-shadow : none;
+}
+
+.sep_item
+{
+    margin : 0px 10px;
+}
+
+/*More Information*/
+#information
+{
+    margin : 10px 0px;
+    width : 100%;
+    min-height : 20px;
+}
+
+.info_cover
+{
+    border-radius : 3px;
+    background-color : #000066;
+}
+
+.info_cover p
+{
+    margin : 0;
+    margin-left : 2px;
+    color : white;
+}
+
+/*Footer*/
+#footer
+{
+    min-width : 1000px;
+    min-height : 300px;
+    margin : 0;
+}
+
+.footer_cover
+{
+    position : relative;
+    max-width : 100%;
+    min-height : 300px;
+    border-radius : 10px;
+    background-color : black;
+}
+
+/*Shipping Details*/
+#shipping
+{
+    float : left;
+    padding : 0px 50px;
+    min-width : 100px;
+    height : 300px;
+}
+
+#shipping h3
+{
+    border-bottom : 1px solid grey;
+    margin : 15px 0px;
+    color : #6680e2;
+}
+
+#shipping p
+{
+    margin : 10px 0px;
+    color : #b2e2f2;
+}
+
+#shipping ul
+{
+    padding-left : 10px;
+}
+
+#shipping li
+{
+    line-height : 25px;
+    color : #bfbfd9;
+}
+
+#shipping li:before
+{
+    content : "\2bc8";
+    color : #EBF5FF;
+}
+
+/*Game Consoles*/
+#about_consoles
+{
+    float : left;
+    padding : 0px 250px;
+    min-width : 100px;
+    height : 300px;
+}
+
+#about_consoles h3
+{
+    border-bottom : 1px solid grey;
+    margin : 15px 0px;
+    color : #6680e2;
+}
+
+#about_consoles p
+{
+    margin : 5px 0px;
+    color : #b2e2f2;
+}
+
+#about_consoles ul
+{
+    padding-left : 10px;
+}
+
+#about_consoles li
+{
+    line-height : 18px;
+    color : #EBF5FF;
+}
+
+#about_consoles li:before
+{
+    content : "\2bc8";
+}
+
+#about_consoles a
+{
+    text-decoration : none;
+    color : #D9D9D9;
+}
+
+/*Contact Us*/
+#contact
+{
+    float : left;
+    padding : 0px 10px;
+    min-width : 100px;
+    height : 300px;
+}
+
+#contact h3
+{
+    border-bottom : 1px solid grey;
+    margin : 15px 0px;
+    color : #6680e2;
+}
+
+#contact p
+{
+    margin : 5px 0px;
+    color : #b2e2f2;
+}
+
+#contact p:before
+{
+    content: "\1f4de";
+}
+
+#contact a
+{
+    text-decoration : none;
+    color : white;
+}
+
+#contact a:before
+{
+    content: "\1f4e7";
+}
