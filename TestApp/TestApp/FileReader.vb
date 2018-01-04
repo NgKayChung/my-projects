@@ -11,6 +11,7 @@ Public Class FileReader
     Public Sub OpenFile()
         Dim file = My.Computer.FileSystem.OpenTextFileReader(FilePath)
         GetLineNumbers(file)
+        file.Close()
     End Sub
 
     Public Sub GetLineNumbers(fileStream As StreamReader)
@@ -28,6 +29,8 @@ Public Class FileReader
         For index = 0 To lineData.Length - 1
             lineData(index) = file.ReadLine()
         Next
+
+        file.Close()
 
         Return lineData
     End Function
