@@ -22,6 +22,10 @@ Public Class FileReader
     End Sub
 
     Public Function GetData() As String()
+        If LineNumber <= 10 Then
+            Return {""}
+        End If
+
         Dim file = My.Computer.FileSystem.OpenTextFileReader(FilePath)
         Dim lineData(LineNumber) As String
         Dim index As Integer = 0

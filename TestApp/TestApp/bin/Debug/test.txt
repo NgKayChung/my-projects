@@ -1,0 +1,23 @@
+Connecting to card in reader ACS ACR39U ICC Reader 0...
+Using card driver Default driver for unknown cards.
+Sending: 00 A4 04 00 0A A0 00 00 00 74 4A 50 4E 00 10 
+Received (SW1=0x90, SW2=0x00)
+Sending: C8 32 00 00 05 08 00 00 60 00 
+Received (SW1=0x91, SW2=0x08)
+Sending: CC 00 00 00 08 01 00 01 00 03 00 60 00 
+Received (SW1=0x94, SW2=0x60)
+Sending: CC 06 00 00 60 
+Received (SW1=0x90, SW2=0x00):
+4E 47 20 4B 41 59 20 43 48 55 4E 47 20 20 20 20 NG KAY CHUNG    
+20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20                 
+20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20                 
+20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20                 
+20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20                 
+20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20                 
+Sending: C8 32 00 00 05 08 00 00 0D 00 
+Received (SW1=0x91, SW2=0x08)
+Sending: CC 00 00 00 08 01 00 01 00 11 01 0D 00 
+Received (SW1=0x94, SW2=0x0D)
+Sending: CC 06 00 00 0D 
+Received (SW1=0x90, SW2=0x00):
+39 38 31 32 32 30 35 36 35 34 34 33 20 981220565443 
