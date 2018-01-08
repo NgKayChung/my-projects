@@ -32,3 +32,15 @@ C:\Users\l\Documents\GitHub\my-projects\ReadCardApp\CardReadApp\obj\Debug\CardRe
 C:\Users\l\Documents\GitHub\my-projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.exe
 C:\Users\l\Documents\GitHub\my-projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.xml
 C:\Users\l\Documents\GitHub\my-projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.pdb
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\bin\Debug\CardReadApp.exe.config
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\bin\Debug\CardReadApp.exe
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\bin\Debug\CardReadApp.pdb
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\bin\Debug\CardReadApp.xml
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.vbprojResolveAssemblyReference.cache
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.CardReadAppForm.resources
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.Resources.resources
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.vbproj.GenerateResource.Cache
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.vbproj.CoreCompileInputs.cache
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.exe
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.xml
+C:\Users\HAPPY MOMENTS\Documents\Visual Studio 2017\Projects\ReadCardApp\CardReadApp\obj\Debug\CardReadApp.pdb

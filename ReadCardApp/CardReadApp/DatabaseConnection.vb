@@ -34,4 +34,10 @@ Public Class DatabaseConnection
 
         Return success
     End Function
+
+    Public Sub Close()
+        SqlCommand.Dispose()
+        SqlConnection.Close()
+        SqlConnection.Dispose()
+    End Sub
 End Class

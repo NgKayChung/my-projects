@@ -33,6 +33,8 @@ Partial Class CardReadAppForm
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.QualifiedLabel = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Panel14 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -47,25 +49,26 @@ Partial Class CardReadAppForm
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.ICTBox = New System.Windows.Forms.TextBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
         Me.BrowseDatabaseBtn = New System.Windows.Forms.Button()
-        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.databaseLabel = New System.Windows.Forms.Label()
-        Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.BrowseBatBtn = New System.Windows.Forms.Button()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.dbOKLabel = New System.Windows.Forms.Label()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.batOKLabel = New System.Windows.Forms.Label()
         Me.DatabaseFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.BatchFileDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel4.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
+        Me.Panel13.SuspendLayout()
+        Me.Panel14.SuspendLayout()
         Me.TableLayoutPanel5.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -74,11 +77,12 @@ Partial Class CardReadAppForm
         Me.Panel7.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel8.SuspendLayout()
+        Me.Panel11.SuspendLayout()
+        Me.Panel10.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel6.SuspendLayout()
         Me.Panel9.SuspendLayout()
-        Me.Panel10.SuspendLayout()
-        Me.Panel11.SuspendLayout()
-        Me.Panel12.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -87,14 +91,16 @@ Partial Class CardReadAppForm
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel4, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel10, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel8, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
+        Me.TableLayoutPanel1.RowCount = 4
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(648, 567)
         Me.TableLayoutPanel1.TabIndex = 0
         '
@@ -112,13 +118,13 @@ Partial Class CardReadAppForm
         Me.TableLayoutPanel4.Controls.Add(Me.ClearBtn, 3, 1)
         Me.TableLayoutPanel4.Controls.Add(Me.ExitBtn, 5, 1)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 144)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 73)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 3
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(642, 79)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(642, 64)
         Me.TableLayoutPanel4.TabIndex = 6
         '
         'ReadCardBtn
@@ -131,9 +137,9 @@ Partial Class CardReadAppForm
         Me.ReadCardBtn.Enabled = False
         Me.ReadCardBtn.FlatAppearance.BorderSize = 5
         Me.ReadCardBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.ReadCardBtn.Location = New System.Drawing.Point(57, 22)
+        Me.ReadCardBtn.Location = New System.Drawing.Point(57, 19)
         Me.ReadCardBtn.Name = "ReadCardBtn"
-        Me.ReadCardBtn.Size = New System.Drawing.Size(135, 33)
+        Me.ReadCardBtn.Size = New System.Drawing.Size(135, 26)
         Me.ReadCardBtn.TabIndex = 0
         Me.ReadCardBtn.Text = "Read Card"
         Me.ReadCardBtn.UseVisualStyleBackColor = False
@@ -147,9 +153,9 @@ Partial Class CardReadAppForm
         Me.ClearBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ClearBtn.FlatAppearance.BorderSize = 5
         Me.ClearBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.ClearBtn.Location = New System.Drawing.Point(252, 22)
+        Me.ClearBtn.Location = New System.Drawing.Point(252, 19)
         Me.ClearBtn.Name = "ClearBtn"
-        Me.ClearBtn.Size = New System.Drawing.Size(135, 33)
+        Me.ClearBtn.Size = New System.Drawing.Size(135, 26)
         Me.ClearBtn.TabIndex = 3
         Me.ClearBtn.Text = "Clear"
         Me.ClearBtn.UseVisualStyleBackColor = False
@@ -163,9 +169,9 @@ Partial Class CardReadAppForm
         Me.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ExitBtn.FlatAppearance.BorderSize = 5
         Me.ExitBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.ExitBtn.Location = New System.Drawing.Point(447, 22)
+        Me.ExitBtn.Location = New System.Drawing.Point(447, 19)
         Me.ExitBtn.Name = "ExitBtn"
-        Me.ExitBtn.Size = New System.Drawing.Size(135, 33)
+        Me.ExitBtn.Size = New System.Drawing.Size(135, 26)
         Me.ExitBtn.TabIndex = 3
         Me.ExitBtn.Text = "Quit"
         Me.ExitBtn.UseVisualStyleBackColor = False
@@ -175,9 +181,9 @@ Partial Class CardReadAppForm
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel3)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox1.Font = New System.Drawing.Font("Yu Gothic UI Semibold", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 229)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 143)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(642, 335)
+        Me.GroupBox1.Size = New System.Drawing.Size(642, 334)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "RESULT"
@@ -199,7 +205,7 @@ Partial Class CardReadAppForm
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.545455!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.27273!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.272727!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(636, 304)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(636, 303)
         Me.TableLayoutPanel3.TabIndex = 3
         '
         'Panel1
@@ -209,7 +215,7 @@ Partial Class CardReadAppForm
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel1.Controls.Add(Me.TableLayoutPanel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(34, 215)
+        Me.Panel1.Location = New System.Drawing.Point(34, 214)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(566, 76)
         Me.Panel1.TabIndex = 2
@@ -251,7 +257,7 @@ Partial Class CardReadAppForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.BackColor = System.Drawing.Color.Gainsboro
-        Me.Label4.Font = New System.Drawing.Font("Adobe Gothic Std B", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label4.Location = New System.Drawing.Point(115, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.No
@@ -260,6 +266,24 @@ Partial Class CardReadAppForm
         Me.Label4.Text = "Status"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.Label4.UseCompatibleTextRendering = True
+        '
+        'Panel13
+        '
+        Me.Panel13.Controls.Add(Me.Label6)
+        Me.Panel13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel13.Location = New System.Drawing.Point(388, 19)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(122, 59)
+        Me.Panel13.TabIndex = 3
+        '
+        'Panel14
+        '
+        Me.Panel14.Controls.Add(Me.PictureBox1)
+        Me.Panel14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel14.Location = New System.Drawing.Point(516, 19)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(123, 59)
+        Me.Panel14.TabIndex = 4
         '
         'TableLayoutPanel5
         '
@@ -286,7 +310,7 @@ Partial Class CardReadAppForm
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(566, 187)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(566, 186)
         Me.TableLayoutPanel5.TabIndex = 3
         '
         'Panel2
@@ -295,7 +319,7 @@ Partial Class CardReadAppForm
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(31, 12)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(163, 50)
+        Me.Panel2.Size = New System.Drawing.Size(163, 49)
         Me.Panel2.TabIndex = 0
         '
         'Label1
@@ -313,7 +337,7 @@ Partial Class CardReadAppForm
         '
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(31, 86)
+        Me.Panel3.Location = New System.Drawing.Point(31, 85)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(163, 31)
         Me.Panel3.TabIndex = 1
@@ -333,7 +357,7 @@ Partial Class CardReadAppForm
         '
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(31, 141)
+        Me.Panel4.Location = New System.Drawing.Point(31, 140)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(163, 31)
         Me.Panel4.TabIndex = 2
@@ -355,7 +379,7 @@ Partial Class CardReadAppForm
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(299, 12)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(234, 50)
+        Me.Panel5.Size = New System.Drawing.Size(234, 49)
         Me.Panel5.TabIndex = 3
         '
         'nameTBox
@@ -369,14 +393,14 @@ Partial Class CardReadAppForm
         Me.nameTBox.Multiline = True
         Me.nameTBox.Name = "nameTBox"
         Me.nameTBox.ReadOnly = True
-        Me.nameTBox.Size = New System.Drawing.Size(234, 50)
+        Me.nameTBox.Size = New System.Drawing.Size(234, 49)
         Me.nameTBox.TabIndex = 0
         '
         'Panel7
         '
         Me.Panel7.Controls.Add(Me.ageTBox)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel7.Location = New System.Drawing.Point(299, 141)
+        Me.Panel7.Location = New System.Drawing.Point(299, 140)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(234, 31)
         Me.Panel7.TabIndex = 3
@@ -399,7 +423,7 @@ Partial Class CardReadAppForm
         '
         Me.Panel6.Controls.Add(Me.ICTBox)
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel6.Location = New System.Drawing.Point(299, 86)
+        Me.Panel6.Location = New System.Drawing.Point(299, 85)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(234, 31)
         Me.Panel6.TabIndex = 4
@@ -424,101 +448,35 @@ Partial Class CardReadAppForm
         Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel8.Location = New System.Drawing.Point(3, 3)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(642, 135)
+        Me.Panel8.Size = New System.Drawing.Size(642, 64)
         Me.Panel8.TabIndex = 7
-        '
-        'TableLayoutPanel6
-        '
-        Me.TableLayoutPanel6.ColumnCount = 4
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel6.Controls.Add(Me.BrowseDatabaseBtn, 2, 1)
-        Me.TableLayoutPanel6.Controls.Add(Me.Panel9, 1, 1)
-        Me.TableLayoutPanel6.Controls.Add(Me.Panel10, 1, 3)
-        Me.TableLayoutPanel6.Controls.Add(Me.BrowseBatBtn, 2, 3)
-        Me.TableLayoutPanel6.Controls.Add(Me.Panel11, 3, 1)
-        Me.TableLayoutPanel6.Controls.Add(Me.Panel12, 3, 3)
-        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel6.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
-        Me.TableLayoutPanel6.RowCount = 5
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(642, 135)
-        Me.TableLayoutPanel6.TabIndex = 0
         '
         'BrowseDatabaseBtn
         '
         Me.BrowseDatabaseBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BrowseDatabaseBtn.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BrowseDatabaseBtn.Location = New System.Drawing.Point(323, 30)
+        Me.BrowseDatabaseBtn.Location = New System.Drawing.Point(323, 19)
         Me.BrowseDatabaseBtn.Name = "BrowseDatabaseBtn"
-        Me.BrowseDatabaseBtn.Size = New System.Drawing.Size(186, 27)
+        Me.BrowseDatabaseBtn.Size = New System.Drawing.Size(186, 26)
         Me.BrowseDatabaseBtn.TabIndex = 0
         Me.BrowseDatabaseBtn.Text = "Browse For Database"
         Me.BrowseDatabaseBtn.UseVisualStyleBackColor = True
-        '
-        'Panel9
-        '
-        Me.Panel9.Controls.Add(Me.databaseLabel)
-        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel9.Location = New System.Drawing.Point(131, 30)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(186, 27)
-        Me.Panel9.TabIndex = 1
         '
         'databaseLabel
         '
         Me.databaseLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.databaseLabel.Location = New System.Drawing.Point(0, 0)
         Me.databaseLabel.Name = "databaseLabel"
-        Me.databaseLabel.Size = New System.Drawing.Size(186, 27)
+        Me.databaseLabel.Size = New System.Drawing.Size(186, 26)
         Me.databaseLabel.TabIndex = 0
         Me.databaseLabel.Text = "Database File Path : "
         Me.databaseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Panel10
-        '
-        Me.Panel10.Controls.Add(Me.Label5)
-        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel10.Location = New System.Drawing.Point(131, 76)
-        Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(186, 27)
-        Me.Panel10.TabIndex = 2
-        '
-        'Label5
-        '
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.Location = New System.Drawing.Point(0, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(186, 27)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Batch File Path :"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BrowseBatBtn
-        '
-        Me.BrowseBatBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BrowseBatBtn.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BrowseBatBtn.Location = New System.Drawing.Point(323, 76)
-        Me.BrowseBatBtn.Name = "BrowseBatBtn"
-        Me.BrowseBatBtn.Size = New System.Drawing.Size(186, 27)
-        Me.BrowseBatBtn.TabIndex = 3
-        Me.BrowseBatBtn.Text = "Browse For Batch File"
-        Me.BrowseBatBtn.UseVisualStyleBackColor = True
-        '
         'Panel11
         '
         Me.Panel11.Controls.Add(Me.dbOKLabel)
-        Me.Panel11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel11.Location = New System.Drawing.Point(515, 30)
+        Me.Panel11.Location = New System.Drawing.Point(515, 19)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(124, 27)
+        Me.Panel11.Size = New System.Drawing.Size(124, 26)
         Me.Panel11.TabIndex = 4
         '
         'dbOKLabel
@@ -528,33 +486,11 @@ Partial Class CardReadAppForm
         Me.dbOKLabel.ForeColor = System.Drawing.Color.Lime
         Me.dbOKLabel.Location = New System.Drawing.Point(0, 0)
         Me.dbOKLabel.Name = "dbOKLabel"
-        Me.dbOKLabel.Size = New System.Drawing.Size(29, 27)
+        Me.dbOKLabel.Size = New System.Drawing.Size(29, 26)
         Me.dbOKLabel.TabIndex = 0
         Me.dbOKLabel.Text = "OK"
         Me.dbOKLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.dbOKLabel.Visible = False
-        '
-        'Panel12
-        '
-        Me.Panel12.Controls.Add(Me.batOKLabel)
-        Me.Panel12.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel12.Location = New System.Drawing.Point(515, 76)
-        Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(124, 27)
-        Me.Panel12.TabIndex = 5
-        '
-        'batOKLabel
-        '
-        Me.batOKLabel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.batOKLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.batOKLabel.ForeColor = System.Drawing.Color.Lime
-        Me.batOKLabel.Location = New System.Drawing.Point(0, 0)
-        Me.batOKLabel.Name = "batOKLabel"
-        Me.batOKLabel.Size = New System.Drawing.Size(29, 27)
-        Me.batOKLabel.TabIndex = 1
-        Me.batOKLabel.Text = "OK"
-        Me.batOKLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.batOKLabel.Visible = False
         '
         'DatabaseFileDialog
         '
@@ -572,6 +508,84 @@ Partial Class CardReadAppForm
         Me.BatchFileDialog.InitialDirectory = "C:\"
         Me.BatchFileDialog.Title = "Open a Batch File"
         '
+        'Panel10
+        '
+        Me.Panel10.Controls.Add(Me.TableLayoutPanel7)
+        Me.Panel10.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel10.Location = New System.Drawing.Point(3, 483)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(642, 81)
+        Me.Panel10.TabIndex = 8
+        '
+        'TableLayoutPanel7
+        '
+        Me.TableLayoutPanel7.ColumnCount = 3
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel7.Controls.Add(Me.Panel13, 1, 1)
+        Me.TableLayoutPanel7.Controls.Add(Me.Panel14, 2, 1)
+        Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
+        Me.TableLayoutPanel7.RowCount = 2
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(642, 81)
+        Me.TableLayoutPanel7.TabIndex = 0
+        '
+        'Label6
+        '
+        Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(0, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(122, 59)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "Ver. 1.0 Powered by :"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PictureBox1.Image = Global.CardReadApp.My.Resources.Resources.happymomentum_logo
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(123, 59)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        Me.PictureBox1.WaitOnLoad = True
+        '
+        'TableLayoutPanel6
+        '
+        Me.TableLayoutPanel6.ColumnCount = 4
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel6.Controls.Add(Me.Panel11, 3, 1)
+        Me.TableLayoutPanel6.Controls.Add(Me.Panel9, 1, 1)
+        Me.TableLayoutPanel6.Controls.Add(Me.BrowseDatabaseBtn, 2, 1)
+        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
+        Me.TableLayoutPanel6.RowCount = 3
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(642, 64)
+        Me.TableLayoutPanel6.TabIndex = 0
+        '
+        'Panel9
+        '
+        Me.Panel9.Controls.Add(Me.databaseLabel)
+        Me.Panel9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel9.Location = New System.Drawing.Point(131, 19)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(186, 26)
+        Me.Panel9.TabIndex = 0
+        '
         'CardReadAppForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -588,6 +602,8 @@ Partial Class CardReadAppForm
         Me.TableLayoutPanel3.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.Panel13.ResumeLayout(False)
+        Me.Panel14.ResumeLayout(False)
         Me.TableLayoutPanel5.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
@@ -599,11 +615,12 @@ Partial Class CardReadAppForm
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
         Me.Panel8.ResumeLayout(False)
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel10.ResumeLayout(False)
+        Me.TableLayoutPanel7.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel6.ResumeLayout(False)
         Me.Panel9.ResumeLayout(False)
-        Me.Panel10.ResumeLayout(False)
-        Me.Panel11.ResumeLayout(False)
-        Me.Panel12.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -633,17 +650,18 @@ Partial Class CardReadAppForm
     Friend WithEvents QualifiedLabel As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
     Friend WithEvents BrowseDatabaseBtn As Button
     Friend WithEvents DatabaseFileDialog As OpenFileDialog
-    Friend WithEvents Panel9 As Panel
     Friend WithEvents databaseLabel As Label
-    Friend WithEvents Panel10 As Panel
-    Friend WithEvents Label5 As Label
-    Friend WithEvents BrowseBatBtn As Button
     Friend WithEvents BatchFileDialog As OpenFileDialog
     Friend WithEvents Panel11 As Panel
     Friend WithEvents dbOKLabel As Label
-    Friend WithEvents Panel12 As Panel
-    Friend WithEvents batOKLabel As Label
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents TableLayoutPanel6 As TableLayoutPanel
+    Friend WithEvents Panel9 As Panel
 End Class

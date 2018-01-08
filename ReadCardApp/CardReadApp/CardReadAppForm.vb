@@ -3,10 +3,11 @@ Imports System.IO
 
 Public Class CardReadAppForm
     Private dbPath As String = ""
-    Private batPath As String = ""
 
     Private Sub CardReadAppForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.ActiveControl = Me.BrowseDatabaseBtn
+        Me.DatabaseFileDialog.InitialDirectory = Environment.CurrentDirectory
+        Me.BatchFileDialog.InitialDirectory = Environment.CurrentDirectory
     End Sub
 
     Private Sub ReadCardBtn_Click(sender As Object, e As EventArgs) Handles ReadCardBtn.Click
@@ -16,18 +17,16 @@ Public Class CardReadAppForm
 
             ' Start running batch file
             Dim myProcess As New Process
-            myProcess.StartInfo.FileName = batPath
-            myProcess.StartInfo.Arguments = batPath & "..\..\tempOutput.txt"
+            myProcess.StartInfo.FileName = Environment.CurrentDirectory & "\readCard.bat"
+            myProcess.StartInfo.Arguments = Environment.CurrentDirectory & "\tempOutput.txt"
             myProcess.Start()
 
-            myProcess.WaitForExit(2000)
-
-            If myProcess.HasExited = False Then
-                myProcess.Kill()
-            End If
+            While myProcess.HasExited = False
+                myProcess.WaitForExit(2000)
+            End While
 
             Dim dataStrings As String() = ReadFile()
-            My.Computer.FileSystem.DeleteFile(batPath & "..\..\tempOutput.txt")
+            My.Computer.FileSystem.DeleteFile(Environment.CurrentDirectory & "\tempOutput.txt")
 
             If dataStrings.First.Equals(String.Empty) Then
                 Throw New Exception("No card inserted or no card reader")
@@ -58,8 +57,6 @@ Public Class CardReadAppForm
 
             ' Retrieving IC Number from idLines
             icNumber = icLines(0).Substring(38).Replace(" ", "")
-
-
 
             ''''''''''''''''
             ' Check database, using icNumber
@@ -94,12 +91,14 @@ Public Class CardReadAppForm
             If dbconn.IsExistedInDB(icNumber) = True Then
                 QualifiedLabel.Text = "Not Qualified"
                 QualifiedLabel.BackColor = Color.Red
+                dbconn.Close()
                 Throw New Exception("Reason : Already registered")
             End If
 
             If age < 54 Then
                 QualifiedLabel.Text = "Not Qualified"
                 QualifiedLabel.BackColor = Color.Red
+                dbconn.Close()
                 Throw New Exception("Reason : Age less than 55")
             End If
 
@@ -107,6 +106,7 @@ Public Class CardReadAppForm
                 If birthMonth >= Date.Now.Month Or birthDay > Date.Now.Day Then
                     QualifiedLabel.Text = "Not Qualified"
                     QualifiedLabel.BackColor = Color.Red
+                    dbconn.Close()
                     Throw New Exception("Reason : Age almost but not fully 55")
                 End If
             End If
@@ -115,6 +115,8 @@ Public Class CardReadAppForm
             QualifiedLabel.BackColor = Color.LawnGreen
 
             dbconn.AddToDB(icNumber, name, age)
+
+            dbconn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -122,7 +124,7 @@ Public Class CardReadAppForm
 
     Private Function ReadFile() As String()
         ' Open output file
-        Dim FileObj As FileReader = New FileReader(batPath & "..\..\tempOutput.txt")
+        Dim FileObj As FileReader = New FileReader(Environment.CurrentDirectory & "\tempOutput.txt")
         FileObj.OpenFile()
         Dim data As String() = FileObj.GetData() 'File Data
         Return data
@@ -165,36 +167,11 @@ Public Class CardReadAppForm
             If DatabaseFileDialog.Filter.Contains(extStr) = True Then
                 Me.dbPath = DatabaseFileDialog.FileName
                 dbOKLabel.Visible = True
-
-                If Me.batPath <> "" Then
-                    ReadCardBtn.Enabled = True
-                End If
+                ReadCardBtn.Enabled = True
             Else
                 MessageBox.Show("Invalid file")
                 Me.dbPath = ""
                 dbOKLabel.Visible = False
-                ReadCardBtn.Enabled = False
-            End If
-        End If
-    End Sub
-
-    Private Sub BrowseBatBtn_Click(sender As Object, e As EventArgs) Handles BrowseBatBtn.Click
-        Dim batPathResult = BatchFileDialog.ShowDialog()
-
-        If batPathResult = DialogResult.OK Then
-            Dim extStr As String = Path.GetExtension(BatchFileDialog.FileName)
-
-            If BatchFileDialog.Filter.Contains(extStr) = True Then
-                Me.batPath = BatchFileDialog.FileName
-                batOKLabel.Visible = True
-
-                If Me.dbPath <> "" Then
-                    ReadCardBtn.Enabled = True
-                End If
-            Else
-                MessageBox.Show("Invalid file")
-                Me.batPath = ""
-                batOKLabel.Visible = False
                 ReadCardBtn.Enabled = False
             End If
         End If
