@@ -1,0 +1,1 @@
+make test.bat run after the data inserted to database, in CardReadApp

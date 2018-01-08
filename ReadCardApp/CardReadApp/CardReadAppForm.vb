@@ -2,12 +2,8 @@
 Imports System.IO
 
 Public Class CardReadAppForm
-    Private dbPath As String = ""
-
     Private Sub CardReadAppForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.ActiveControl = Me.BrowseDatabaseBtn
-        Me.DatabaseFileDialog.InitialDirectory = Environment.CurrentDirectory
-        Me.BatchFileDialog.InitialDirectory = Environment.CurrentDirectory
+        Me.ActiveControl = Me.ReadCardBtn
     End Sub
 
     Private Sub ReadCardBtn_Click(sender As Object, e As EventArgs) Handles ReadCardBtn.Click
@@ -64,7 +60,7 @@ Public Class CardReadAppForm
             ' If existed, throw exception and display message
             '''''''''''''''''
             ' Connect to database
-            Dim dbconn As New DatabaseConnection(dbPath)
+            Dim dbconn As New DatabaseConnection(Environment.CurrentDirectory & "\CharityDB.accde")
 
             ' Getting age number from IC Number
             ' Then extracts birth date from the first 6 characters in icNumber
@@ -156,24 +152,5 @@ Public Class CardReadAppForm
 
     Private Sub ExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
         CardReadAppForm.ActiveForm.Close()
-    End Sub
-
-    Private Sub BrowseDatabaseBtn_Click(sender As Object, e As EventArgs) Handles BrowseDatabaseBtn.Click
-        Dim dbPathResult = DatabaseFileDialog.ShowDialog()
-
-        If dbPathResult = DialogResult.OK Then
-            Dim extStr As String = Path.GetExtension(DatabaseFileDialog.FileName)
-
-            If DatabaseFileDialog.Filter.Contains(extStr) = True Then
-                Me.dbPath = DatabaseFileDialog.FileName
-                dbOKLabel.Visible = True
-                ReadCardBtn.Enabled = True
-            Else
-                MessageBox.Show("Invalid file")
-                Me.dbPath = ""
-                dbOKLabel.Visible = False
-                ReadCardBtn.Enabled = False
-            End If
-        End If
     End Sub
 End Class
