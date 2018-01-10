@@ -5,8 +5,8 @@ Public Class DatabaseConnection
     Private SqlCommand As New OleDb.OleDbCommand
     Private SqlReader As OleDb.OleDbDataReader
 
-    Sub New(dbPath As String)
-        SqlConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbPath & ";"
+    Sub New(path As String)
+        SqlConnection.ConnectionString = path
         SqlCommand = SqlConnection.CreateCommand()
         SqlConnection.Open()
     End Sub
@@ -33,6 +33,19 @@ Public Class DatabaseConnection
         SqlReader.Close()
 
         Return success
+    End Function
+
+    Public Function GetData(icKey As String) As String()
+        SqlCommand.CommandText = "SELECT * FROM Record WHERE ICNumber=" & Chr(34) & icKey & Chr(34) & ";"
+
+        SqlReader = SqlCommand.ExecuteReader()
+        SqlReader.Read()
+
+        Dim rec As String() = {SqlReader.Item(0), SqlReader.Item(1), SqlReader.Item(2).ToString()}
+
+        SqlReader.Close()
+
+        Return rec
     End Function
 
     Public Sub Close()
