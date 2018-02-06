@@ -5,8 +5,8 @@ Public Class DatabaseConnection
     Private SqlCommand As New OleDb.OleDbCommand
     Private SqlReader As OleDb.OleDbDataReader
 
-    Sub New(path As String)
-        SqlConnection.ConnectionString = path
+    Sub New(conn As String)
+        SqlConnection.ConnectionString = conn
         SqlCommand = SqlConnection.CreateCommand()
         SqlConnection.Open()
     End Sub

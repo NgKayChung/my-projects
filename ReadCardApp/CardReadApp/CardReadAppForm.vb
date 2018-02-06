@@ -15,10 +15,14 @@ Public Class CardReadAppForm
             ' Clear form before starts reading card
             ClearForm()
 
+            If Not My.Computer.FileSystem.FileExists("\\HMC23\Build\Scripts\readCard.bat") Then
+                Throw New FileNotFoundException("File Not Found Exception thrown" & vbCrLf & "File Name : ", "readCard.bat")
+            End If
+
             ' Start running batch file
             Dim myProcess As New Process
             myProcess.StartInfo.UseShellExecute = False
-            myProcess.StartInfo.FileName = "\\HAPPY-MOMENTS\Build\Scripts\readCard.bat"
+            myProcess.StartInfo.FileName = "\\HMC23\Build\Scripts\readCard.bat"
             myProcess.StartInfo.RedirectStandardOutput = True
             myProcess.StartInfo.CreateNoWindow = True
             myProcess.Start()
@@ -32,17 +36,27 @@ Public Class CardReadAppForm
             Me.Cursor = Cursors.Default
 
             Dim dataStrings As String() = myProcess.StandardOutput.ReadToEnd().Split(vbCrLf)
-            dataStrings = TrimStrings(dataStrings, 2, dataStrings.Length - 2)
             myProcess.Close()
 
-            If dataStrings.First.Equals(String.Empty) Then
+            dataStrings = TrimStrings(dataStrings, 2, dataStrings.Length - 2)
+
+            If dataStrings.Length < 10 Then
                 Throw New Exception("No card inserted or no card reader")
             End If
 
-            myProcess.StartInfo.FileName = "\\HAPPY-MOMENTS\Build\temp\scdump.exe"
+            If Not My.Computer.FileSystem.FileExists("\\HMC23\Build\temp\scdump.exe") Then
+                Throw New FileNotFoundException("File Not Found Exception thrown" & vbCrLf & "File Name : ", "scdump.exe")
+            End If
+
+            ' run another program
+            ' Post - IC information output and stored in files
+            ' ONLY to retrieve IC photo
+            myProcess.StartInfo.FileName = "\\HMC23\Build\temp\scdump.exe"
             myProcess.StartInfo.RedirectStandardOutput = False
             myProcess.StartInfo.CreateNoWindow = False
             myProcess.Start()
+
+            ' send enter key to program
             System.Threading.Thread.Sleep(1000)
             SendKeys.Send("{ENTER}")
             System.Threading.Thread.Sleep(1000)
@@ -59,6 +73,7 @@ Public Class CardReadAppForm
             myProcess.Close()
             myProcess.Dispose()
 
+            ' retrieve line from output which containing IC Number
             Dim icLines As String() = TrimStrings(dataStrings, 22, 1)
             Dim icNumber As String = ""
 
@@ -67,21 +82,25 @@ Public Class CardReadAppForm
 
             ''''''''''''''''
             ' Check database, using icNumber
-            ' If not existed in database, check date
-            ' If existed, throw exception and display message
+            ' If not existed in database, continue
+            ' Else, throw exception and display message
             '''''''''''''''''
             ' Connect to database
-            Dim dbconn As New DatabaseConnection("Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" & "\\HAPPY-MOMENTS\Build\DB\CharityDB.accdb" & ";Jet OLEDB:Database Password=happy32momentum;")
+            Dim dbconn As New DatabaseConnection("Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" & "\\HMC23\Build\DB\CharityDB.accdb" & ";Jet OLEDB:Database Password=happy32momentum;")
 
             If dbconn.IsExistedInDB(icNumber) = True Then
                 QualifiedLabel.Text = "Not Qualified"
                 QualifiedLabel.BackColor = Color.Red
+
                 Dim record As String() = dbconn.GetData(icNumber)
+
                 nameTBox.Text = record(1)
                 ICTBox.Text = record(0)
                 ageTBox.Text = record(2)
                 ICPic.ImageLocation = "photo.jpg"
+
                 dbconn.Close()
+
                 Throw New Exception("Reason : Already registered")
             End If
 
@@ -110,7 +129,9 @@ Public Class CardReadAppForm
             ' Then extracts birth date from the first 6 characters in icNumber
             Dim birthYear As Integer = Integer.Parse(icNumber.Substring(0, 2))
             birthYear += If(birthYear >= Date.Now.Year Mod 100, 1900, 2000)
+
             Dim birthPassed As Boolean = False
+
             Dim birthMonth As Integer = Integer.Parse(icNumber.Substring(2, 2))
             Dim birthDay As Integer = Integer.Parse(icNumber.Substring(4, 2))
 
@@ -151,12 +172,16 @@ Public Class CardReadAppForm
             dbconn.AddToDB(icNumber, name, age)
             dbconn.Close()
 
+            If Not My.Computer.FileSystem.FileExists("\\HMC23\Build\Scripts\backup.vbs") Then
+                Throw New Exception("Backup script file not found")
+            End If
+
             ' backup database by making a copy to the backup folder(hidden)
             Dim backupProc As New Process
             backupProc.StartInfo.UseShellExecute = True
             backupProc.StartInfo.RedirectStandardOutput = False
             backupProc.StartInfo.CreateNoWindow = False
-            backupProc.StartInfo.FileName = "\\HAPPY-MOMENTS\Build\Scripts\backup.vbs"
+            backupProc.StartInfo.FileName = "\\HMC23\Build\Scripts\backup.vbs"
             backupProc.Start()
 
             While backupProc.HasExited = False
@@ -165,6 +190,10 @@ Public Class CardReadAppForm
 
             backupProc.Close()
             backupProc.Dispose()
+        Catch fileEx As FileNotFoundException
+            MessageBox.Show(fileEx.Message & fileEx.FileName)
+        Catch invEx As InvalidOperationException
+            MessageBox.Show("Database connection error")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -189,11 +218,13 @@ Public Class CardReadAppForm
         QualifiedLabel.Text = "-"
         QualifiedLabel.BackColor = Color.White
         ICPic.ImageLocation = ""
+
         Dim n As Integer = 1
         While My.Computer.FileSystem.FileExists("jpn" & n.ToString())
             My.Computer.FileSystem.DeleteFile("jpn" & n.ToString())
             n += 1
         End While
+
         If My.Computer.FileSystem.FileExists("photo.jpg") Then
             My.Computer.FileSystem.DeleteFile("photo.jpg")
         End If
