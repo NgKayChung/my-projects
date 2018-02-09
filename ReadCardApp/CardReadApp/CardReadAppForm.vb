@@ -150,21 +150,21 @@ Public Class CardReadAppForm
             ageTBox.Text = age.ToString()
             ICPic.ImageLocation = "photo.jpg"
 
-            'If age < 59 Then
-            '    QualifiedLabel.Text = "Not Qualified"
-            '    QualifiedLabel.BackColor = Color.Red
-            '    dbconn.Close()
-            '    Throw New Exception("Reason : Age less than 60")
-            'End If
+            If age < 59 Then
+                QualifiedLabel.Text = "Not Qualified"
+                QualifiedLabel.BackColor = Color.Red
+                dbconn.Close()
+                Throw New Exception("Reason : Age less than 60")
+            End If
 
-            'If age = 59 Then
-            '    If birthMonth >= Date.Now.Month Or birthDay > Date.Now.Day Then
-            '        QualifiedLabel.Text = "Not Qualified"
-            '        QualifiedLabel.BackColor = Color.Red
-            '        dbconn.Close()
-            '        Throw New Exception("Reason : Age almost but not fully 60")
-            '    End If
-            'End If
+            If age = 59 Then
+                If birthMonth >= Date.Now.Month Or birthDay > Date.Now.Day Then
+                    QualifiedLabel.Text = "Not Qualified"
+                    QualifiedLabel.BackColor = Color.Red
+                    dbconn.Close()
+                    Throw New Exception("Reason : Age almost but not fully 60")
+                End If
+            End If
 
             QualifiedLabel.Text = "Qualified"
             QualifiedLabel.BackColor = Color.LawnGreen
